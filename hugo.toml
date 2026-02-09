@@ -1,0 +1,40 @@
+baseURL = "https://www.alejandrosanchezguinea.com/"
+languageCode = "en-us"
+title = "Alejandro Sanchez Guinea"
+theme = "PaperMod"
+
+enableRobotsTXT = true
+
+[params]
+  author = "Alejandro Sanchez Guinea"
+  description = "AI Research Scientist working on trustworthy and uncertainty-aware AI, LiDAR-first perception, and neuro-symbolic representations."
+  ShowReadingTime = false
+  ShowShareButtons = false
+  ShowPostNavLinks = false
+  ShowBreadCrumbs = false
+
+[menu]
+  [[menu.main]]
+    name = "Research"
+    url = "/research/"
+    weight = 10
+
+  [[menu.main]]
+    name = "Supervised PhD Projects"
+    url = "/supervision/"
+    weight = 20
+
+  [[menu.main]]
+    name = "Code & Systems"
+    url = "/code/"
+    weight = 30
+
+  [[menu.main]]
+    name = "Publications"
+    url = "/publications/"
+    weight = 40
+
+  [[menu.main]]
+    name = "Contact"
+    url = "/contact/"
+    weight = 50

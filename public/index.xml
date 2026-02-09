@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Alejandro Sanchez Guinea</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Alejandro Sanchez Guinea</description>
+    <generator>Hugo -- 0.155.3</generator>
+    <language>en-us</language>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Code &amp; Systems</title>
+      <link>http://localhost:1313/code/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/code/</guid>
+      <description>&lt;p&gt;Most of the software systems associated with my work were developed within &lt;strong&gt;PhD and MSc projects&lt;/strong&gt; under my supervision, in close collaboration with the respective students.&lt;/p&gt;
+&lt;p&gt;My contributions focused on &lt;strong&gt;defining system and decision architectures&lt;/strong&gt;, specifying &lt;strong&gt;uncertainty and control representations&lt;/strong&gt;, and shaping &lt;strong&gt;validation strategies for safety-critical contexts&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;These systems directly inform the design choices behind &lt;strong&gt;EyeTrustAI&lt;/strong&gt;, particularly around when AI systems may act autonomously and when control must escalate to humans. For transparency and proper attribution, implementations are hosted in the repositories of the primary developers, with links provided throughout this site.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>http://localhost:1313/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/contact/</guid>
+      <description>&lt;p&gt;For research collaborations, advisory work, or speaking engagements, you can reach me at:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Email:&lt;/strong&gt; &lt;a href=&#34;mailto:ale.sanchez.guinea@gmail.com&#34;&gt;ale.sanchez.guinea@gmail.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I am particularly interested in collaborations related to trustworthy AI, uncertainty-aware perception, and interpretable AI systems for real-world deployment.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Publications</title>
+      <link>http://localhost:1313/publications/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/publications/</guid>
+      <description>&lt;h2 id=&#34;2025&#34;&gt;2025&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;Achref Doula, Max Mühlhäuser, &lt;strong&gt;Alejandro Sanchez Guinea&lt;/strong&gt;.&lt;br&gt;
+&lt;em&gt;SafePath: Conformal Prediction for Safe LLM-Based Autonomous Navigation.&lt;/em&gt;&lt;br&gt;
+arXiv, 2025 (submitted to AAMAS 2026).&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Alejandro Sanchez Guinea&lt;/strong&gt;, Achref Doula, Thomas Kreutz.&lt;br&gt;
+&lt;em&gt;Motion as Language: Towards a Situation–Motion Language for Spatio-Temporal Learning.&lt;/em&gt;&lt;br&gt;
+NeurIPS Workshops, 2025.&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;Mariya Erokhina, Achref Doula, Lukas Bisorca-Gassendorf, &lt;strong&gt;Alejandro Sanchez Guinea&lt;/strong&gt;.&lt;br&gt;
+&lt;em&gt;Ophthalmology as a Lens for Trustworthy GenAI in Europe: Uncertainty-Aware AI under the EU AI Act.&lt;/em&gt;&lt;br&gt;
+NeurIPS Workshops, 2025.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Research</title>
+      <link>http://localhost:1313/research/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/research/</guid>
+      <description>&lt;p&gt;My research provides the &lt;strong&gt;technical and conceptual foundation&lt;/strong&gt; for my current work as a founder building decision control infrastructure for AI systems under uncertainty.&lt;/p&gt;
+&lt;h3 id=&#34;trustworthy--uncertainty-aware-ai&#34;&gt;Trustworthy &amp;amp; Uncertainty-Aware AI&lt;/h3&gt;
+&lt;p&gt;I develop methods for uncertainty quantification and conformal prediction that allow AI systems to reason about confidence, risk, and failure modes. A key aspect of this work is understanding how uncertainty should be represented, propagated, and communicated to human decision-makers.&lt;/p&gt;
+&lt;h3 id=&#34;lidar-first-multimodal-perception&#34;&gt;LiDAR-First Multimodal Perception&lt;/h3&gt;
+&lt;p&gt;A recurring theme in my work is &lt;strong&gt;LiDAR-first perception&lt;/strong&gt;, motivated by privacy, robustness, and geometric fidelity. I study how LiDAR can be combined with IMU, temporal occupancy representations, and symbolic abstractions to support reliable scene understanding in urban and infrastructure settings.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Supervised PhD Projects</title>
+      <link>http://localhost:1313/supervision/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/supervision/</guid>
+      <description>&lt;p&gt;The projects below were supervised in my role as an academic research lead and form the &lt;strong&gt;conceptual and technical groundwork&lt;/strong&gt; for the systems I am now building in an industrial and startup context.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;achref-doula&#34;&gt;Achref Doula&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;PhD (2020–2025)&lt;/strong&gt;&lt;br&gt;
+&lt;em&gt;On Uncertainty-Aware Perception, Prediction &amp;amp; Planning&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This PhD focused on uncertainty-aware learning and neuro-symbolic modeling for perception and forecasting in autonomous systems. The work combines structured uncertainty representations with interpretable models for motion reasoning.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
