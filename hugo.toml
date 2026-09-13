@@ -8,6 +8,7 @@ enableRobotsTXT = true
   description = "AI innovation and R&D leadership across research strategy, software architecture and technically ambitious product development."
   linkedin = "https://www.linkedin.com/in/alejandro-sanchez-guinea/"
   github = "https://github.com/asguinea"
+  email = "ale.sanchez.guinea@gmail.com"
 
 [menu]
   [[menu.main]]

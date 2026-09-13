@@ -397,7 +397,7 @@ img { display: block; max-width: 100%; }
 .contact-direct-email a { color: var(--white); }
 
 body.contact-dialog-open { overflow: hidden; }
-.unified-contact-trigger { position: fixed; z-index: 71; right: max(20px, env(safe-area-inset-right)); bottom: max(20px, env(safe-area-inset-bottom)); display: inline-flex; align-items: center; gap: 9px; min-height: 48px; padding: 0 16px; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; color: var(--white); background: var(--ink); box-shadow: 0 14px 40px rgba(24,36,51,.24); cursor: pointer; font: inherit; font-size: 12px; font-weight: 780; }
+.unified-contact-trigger { position: fixed; z-index: 71; right: max(20px, env(safe-area-inset-right)); bottom: max(20px, env(safe-area-inset-bottom)); display: inline-flex; align-items: center; gap: 9px; min-height: 48px; padding: 0 16px; border: 1px solid rgba(255,255,255,.18); border-radius: 999px; color: var(--white); background: var(--ink); box-shadow: 0 14px 40px rgba(24,36,51,.24); cursor: pointer; font: inherit; font-size: 14px; font-weight: 780; }
 .unified-contact-trigger:hover { background: var(--teal-dark); }
 .unified-contact-dot { width: 7px; height: 7px; border-radius: 50%; background: #b8cfe1; box-shadow: 0 0 0 4px rgba(184,207,225,.15); }
 .unified-contact-backdrop { position: fixed; z-index: 69; inset: 0; background: rgba(15,25,36,.32); backdrop-filter: blur(2px); }
@@ -406,12 +406,12 @@ body.contact-dialog-open { overflow: hidden; }
 .unified-contact-header { position: relative; display: grid; grid-template-columns: 1fr auto; gap: 24px; padding: 27px 29px 25px; color: var(--white); background: var(--teal-dark); }
 .unified-contact-header .micro-label { margin-bottom: 6px; color: #c5d9e8; }
 .unified-contact-header h2 { margin: 0; font-family: var(--display); font-size: 26px; line-height: 1.15; font-weight: 680; letter-spacing: -.035em; }
-.unified-contact-header p:last-child { max-width: 525px; margin: 8px 0 0; color: #c5d2dc; font-size: 13px; line-height: 1.5; }
+.unified-contact-header p:last-child { max-width: 525px; margin: 8px 0 0; color: #c5d2dc; font-size: 15px; line-height: 1.5; }
 .unified-contact-close { display: grid; place-items: center; width: 35px; height: 35px; padding: 0; border: 1px solid rgba(255,255,255,.25); border-radius: 50%; color: var(--white); background: rgba(255,255,255,.06); cursor: pointer; font: inherit; font-size: 21px; line-height: 1; }
 .unified-contact-close:hover { background: rgba(255,255,255,.13); }
 .unified-contact-form { display: grid; gap: 17px; padding: 25px 29px 27px; }
 .unified-contact-topic { min-width: 0; margin: 0; padding: 0; border: 0; }
-.unified-contact-topic legend, .unified-contact-field > label { display: block; margin: 0 0 7px; padding: 0; color: var(--ink-2); font-size: 11px; font-weight: 760; }
+.unified-contact-topic legend, .unified-contact-field > label { display: block; margin: 0 0 7px; padding: 0; color: var(--ink-2); font-size: 13px; font-weight: 760; }
 .unified-contact-topic legend span, .unified-contact-field > label span { color: #78828d; font-weight: 560; }
 .visually-hidden { position: absolute !important; width: 1px !important; height: 1px !important; padding: 0 !important; margin: -1px !important; overflow: hidden !important; clip: rect(0, 0, 0, 0) !important; white-space: nowrap !important; border: 0 !important; }
 .unified-contact-options { display: grid; grid-template-columns: 1fr; gap: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 8px; }
@@ -423,29 +423,29 @@ body.contact-dialog-open { overflow: hidden; }
 .unified-contact-options label:hover > span { background: #f1f4f8; }
 .unified-contact-options input:checked + span { background: #e7eff5; box-shadow: inset 3px 0 0 var(--teal); }
 .unified-contact-options strong, .unified-contact-options small { display: block; }
-.unified-contact-options strong { font-size: 13px; line-height: 1.3; }
-.unified-contact-options small { margin-top: 3px; color: #687480; font-size: 11px; line-height: 1.35; }
+.unified-contact-options strong { font-size: 15px; line-height: 1.3; }
+.unified-contact-options small { margin-top: 3px; color: #687480; font-size: 13px; line-height: 1.4; }
 .unified-contact-topic.is-selected { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 10px; align-items: stretch; }
 .unified-contact-topic.is-selected .unified-contact-options label > span { border-bottom: 0; }
-.unified-contact-change { min-width: 78px; padding: 0 14px; border: 1px solid var(--line); border-radius: 8px; color: var(--teal-dark); background: var(--white); cursor: pointer; font: inherit; font-size: 11px; font-weight: 780; }
+.unified-contact-change { min-width: 78px; padding: 0 14px; border: 1px solid var(--line); border-radius: 8px; color: var(--teal-dark); background: var(--white); cursor: pointer; font: inherit; font-size: 13px; font-weight: 780; }
 .unified-contact-change:hover { border-color: var(--teal); background: var(--paper); }
 .unified-contact-details { display: grid; gap: 17px; padding-top: 2px; }
 .unified-contact-details[hidden], .unified-contact-collaboration[hidden] { display: none; }
-.unified-contact-context { margin: 0; padding: 10px 12px; color: var(--teal-dark); background: var(--paper-2); border-left: 3px solid var(--teal); font-size: 11px; line-height: 1.45; font-weight: 700; }
-.unified-contact-field input, .unified-contact-field textarea, .unified-contact-field select { width: 100%; border: 1px solid #bec9d3; border-radius: 4px; color: var(--ink); background: var(--white); font: inherit; font-size: 13px; }
+.unified-contact-context { margin: 0; padding: 11px 13px; color: var(--teal-dark); background: var(--paper-2); border-left: 3px solid var(--teal); font-size: 14px; line-height: 1.5; font-weight: 700; }
+.unified-contact-field input, .unified-contact-field textarea, .unified-contact-field select { width: 100%; border: 1px solid #bec9d3; border-radius: 4px; color: var(--ink); background: var(--white); font: inherit; font-size: 15px; }
 .unified-contact-field input, .unified-contact-field select { min-height: 43px; padding: 9px 11px; }
 .unified-contact-field textarea { min-height: 116px; padding: 10px 11px; line-height: 1.5; resize: vertical; }
 .unified-contact-field input:focus, .unified-contact-field textarea:focus, .unified-contact-field select:focus { outline: 2px solid rgba(66,111,147,.22); border-color: var(--teal); }
-.unified-contact-field > small { display: block; margin-top: 5px; color: #78828d; font-size: 10px; }
+.unified-contact-field > small { display: block; margin-top: 5px; color: #6c7783; font-size: 12px; }
 .unified-contact-identity { display: grid; grid-template-columns: .8fr 1.2fr; gap: 11px; }
 .unified-contact-honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
 .unified-contact-footer { display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: center; }
-.unified-contact-footer p { margin: 0; color: #707b86; font-size: 10px; line-height: 1.45; }
-.unified-contact-footer button { min-height: 43px; padding: 0 17px; border: 0; border-radius: 3px; color: var(--white); background: var(--teal-dark); cursor: pointer; font: inherit; font-size: 12px; font-weight: 760; }
+.unified-contact-footer p { margin: 0; color: #68737f; font-size: 12px; line-height: 1.5; }
+.unified-contact-footer button { min-height: 46px; padding: 0 18px; border: 0; border-radius: 3px; color: var(--white); background: var(--teal-dark); cursor: pointer; font: inherit; font-size: 14px; font-weight: 760; }
 .unified-contact-footer button:hover { background: var(--teal); }
 .unified-contact-footer button:disabled { cursor: wait; opacity: .65; }
-.unified-contact-status { min-height: 18px; margin: -6px 0 0; color: var(--teal-dark); font-size: 11px; font-weight: 680; }
-.unified-contact-email-fallback { margin: -10px 0 0; color: #707b86; font-size: 10px; }
+.unified-contact-status { min-height: 18px; margin: -6px 0 0; color: var(--teal-dark); font-size: 13px; font-weight: 680; }
+.unified-contact-email-fallback { margin: -10px 0 0; color: #68737f; font-size: 12px; line-height: 1.5; }
 .unified-contact-email-fallback a { color: var(--teal-dark); }
 
 @media (max-width: 980px) {

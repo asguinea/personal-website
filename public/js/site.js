@@ -25,6 +25,13 @@ const contactMessage = document.querySelector('#unified-contact-message');
 const contactOpeners = [...document.querySelectorAll('.js-contact-open')];
 let contactReturnTarget = null;
 
+const contactTopicLabels = {
+  engagement: 'Advisory engagement',
+  role: 'Role or leadership opportunity',
+  collaboration: 'Venture or research collaboration',
+  other: 'Professional enquiry',
+};
+
 const contactRouteAliases = {
   advisory: 'engagement',
   leadership: 'role',
@@ -153,8 +160,52 @@ contactForm?.addEventListener('submit', async (event) => {
   }
 
   const endpoint = contactForm.dataset.contactEndpoint;
+  const contactEmail = contactForm.dataset.contactEmail;
   if (!endpoint) {
-    contactStatus.textContent = 'This local preview does not send enquiries. Please use the LinkedIn link below.';
+    const payload = Object.fromEntries(new FormData(contactForm).entries());
+    if (payload.confirmation) {
+      contactForm.reset();
+      setContactSelection('', '');
+      contactStatus.textContent = 'Thank you. Your enquiry has been prepared.';
+      return;
+    }
+    if (!contactEmail) {
+      contactStatus.textContent = 'Email delivery is unavailable. Please use the direct email link below.';
+      return;
+    }
+
+    const collaborationLabels = {
+      eyetrustai: 'EyeTrustAI',
+      'burritos-labs': 'Burrito’s Labs',
+      'independent-research': 'Independent research collaboration',
+    };
+    const timeframeLabels = {
+      'within-one-month': 'Within one month',
+      'one-to-three-months': 'One to three months',
+      'three-to-six-months': 'Three to six months',
+      'later-or-exploring': 'Later or currently exploring',
+    };
+    const subjectParts = [contactTopicLabels[payload.topic] || 'Professional enquiry'];
+    if (payload.organisation) subjectParts.push(payload.organisation);
+    const bodyLines = [
+      `Contact route: ${contactTopicLabels[payload.topic] || payload.topic}`,
+      payload.interest ? `Area of interest: ${payload.interest}` : '',
+      payload.collaboration_area ? `Collaboration area: ${collaborationLabels[payload.collaboration_area] || payload.collaboration_area}` : '',
+      '',
+      `Name: ${payload.name}`,
+      `Email: ${payload.email}`,
+      `Role: ${payload.role}`,
+      `Organisation or project: ${payload.organisation}`,
+      payload.project_url ? `Website: ${payload.project_url}` : '',
+      `Expected timeframe: ${timeframeLabels[payload.timeframe] || payload.timeframe}`,
+      '',
+      `${contactRoutes[payload.topic]?.label || 'Message'}:`,
+      payload.message,
+    ].filter((line, index, lines) => line || (index > 0 && lines[index - 1]));
+
+    const mailto = `mailto:${contactEmail}?subject=${encodeURIComponent(subjectParts.join(' | '))}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+    contactStatus.textContent = 'Your email app should open with the enquiry prepared. Review it and send when ready.';
+    window.location.href = mailto;
     return;
   }
 

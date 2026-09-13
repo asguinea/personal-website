@@ -9,7 +9,7 @@
     <button class="unified-contact-close" type="button" aria-label="Close contact form">×</button>
   </header>
 
-  <form class="unified-contact-form" novalidate data-contact-endpoint="">
+  <form class="unified-contact-form" novalidate data-contact-endpoint="" data-contact-email="{{ site.Params.email }}">
     <input type="hidden" name="interest" value="">
 
     <fieldset class="unified-contact-topic">
@@ -99,10 +99,10 @@
 
       <div class="unified-contact-footer">
         <p>Your details will be used only to read and reply to this message. No mailing list.</p>
-        <button type="submit">Send enquiry <span aria-hidden="true">→</span></button>
+        <button type="submit">Continue by email <span aria-hidden="true">→</span></button>
       </div>
       <p class="unified-contact-status" role="status" aria-live="polite"></p>
     </div>
-    <p class="unified-contact-email-fallback">You can also connect through <a href="{{ site.Params.linkedin }}">LinkedIn</a>.</p>
+    <p class="unified-contact-email-fallback">Or email <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a> directly, or connect through <a href="{{ site.Params.linkedin }}">LinkedIn</a>.</p>
   </form>
 </section>
