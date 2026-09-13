@@ -1,0 +1,20 @@
+{{ define "main" }}
+<article class="about-relaxed-page">
+  <section class="about-relaxed-hero">
+    <div class="shell about-relaxed-hero-grid">
+      <figure class="about-relaxed-portrait">
+        <img src="/img/alejandro-relaxed.jpg" width="1089" height="1445" alt="Alejandro Sanchez Guinea seated at a café">
+      </figure>
+      <div class="about-relaxed-hero-copy">
+        <h1>Most of my work begins with a simple question.</h1>
+        <p class="about-relaxed-question">What would it take for an intelligent system to be not merely impressive, but genuinely dependable?</p>
+        <p class="about-relaxed-intro">I am a research scientist and builder working across AI safety, foundation models, natural intelligence and practical software. I tend to work where these threads meet: evidence and uncertainty, representations and abstraction, rigorous research and useful things.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="shell about-relaxed-body">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

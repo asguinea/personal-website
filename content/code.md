@@ -1,11 +1,22 @@
 ---
-title: "Code & Systems"
-draft: false
+title: "Code, systems and attribution"
+eyebrow: "Technical record"
+description: "A transparent account of how Alejandro contributed to systems developed through supervised PhD and MSc research."
 ---
 
-Most of the software systems associated with my work were developed within **PhD and MSc projects** under my supervision, in close collaboration with the respective students.
+Most software systems associated with my recent research were developed within PhD and MSc projects under my supervision, in close collaboration with the respective researchers.
 
-My contributions focused on **defining system and decision architectures**, specifying **uncertainty and control representations**, and shaping **validation strategies for safety-critical contexts**.
+My contributions focused on:
 
-These systems directly inform the design choices behind **EyeTrustAI**, particularly around when AI systems may act autonomously and when control must escalate to humans. For transparency and proper attribution, implementations are hosted in the repositories of the primary developers, with links provided throughout this site.
+- defining system and decision architectures;
+- specifying uncertainty and control representations;
+- shaping scientific questions and validation strategies;
+- connecting individual systems into a broader research programme;
+- coordinating publication and collaboration partners.
+
+Implementations are hosted in the repositories of the primary developers. This site links to those repositories and attributes the work accordingly.
+
+These systems directly inform the design choices behind EyeTrustAI, particularly around when AI systems may act autonomously and when control must escalate to humans.
+
+See [supervised research programmes](/supervision/) for the main systems and repositories.
 

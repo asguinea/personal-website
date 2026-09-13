@@ -1,40 +1,23 @@
 baseURL = "https://www.alejandrosanchezguinea.com/"
 languageCode = "en-us"
-title = "Alejandro Sanchez Guinea"
-theme = "PaperMod"
-
+title = "Alejandro Sanchez Guinea | AI Innovation & R&D Leadership"
 enableRobotsTXT = true
 
 [params]
   author = "Alejandro Sanchez Guinea"
-  description = "AI Research Scientist working on trustworthy and uncertainty-aware AI, LiDAR-first perception, and neuro-symbolic representations."
-  ShowReadingTime = false
-  ShowShareButtons = false
-  ShowPostNavLinks = false
-  ShowBreadCrumbs = false
+  description = "AI innovation and R&D leadership across research strategy, software architecture and technically ambitious product development."
+  linkedin = "https://www.linkedin.com/in/alejandro-sanchez-guinea/"
+  github = "https://github.com/asguinea"
 
 [menu]
   [[menu.main]]
-    name = "Research"
-    url = "/research/"
+    name = "About"
+    url = "/about/"
     weight = 10
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
 
-  [[menu.main]]
-    name = "Supervised PhD Projects"
-    url = "/supervision/"
-    weight = 20
-
-  [[menu.main]]
-    name = "Code & Systems"
-    url = "/code/"
-    weight = 30
-
-  [[menu.main]]
-    name = "Publications"
-    url = "/publications/"
-    weight = 40
-
-  [[menu.main]]
-    name = "Contact"
-    url = "/contact/"
-    weight = 50
+[outputs]
+  home = ["HTML", "RSS"]

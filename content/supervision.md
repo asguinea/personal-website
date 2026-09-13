@@ -1,53 +1,35 @@
 ---
-title: "Supervised PhD Projects"
-draft: false
+title: "Supervised research programmes"
+eyebrow: "Research leadership"
+description: "Two completed PhD programmes that form part of the technical foundation for Alejandro's work in uncertainty-aware autonomy and multimodal perception."
 ---
 
-The projects below were supervised in my role as an academic research lead and form the **conceptual and technical groundwork** for the systems I am now building in an industrial and startup context.
+The projects below were supervised in my role as an academic research lead. Implementations are credited to and hosted by the primary developers; my contribution focused on scientific direction, model and representation design, validation strategy and publication strategy.
 
+## Achref Doula · PhD 2020–2025
 
----
+### Uncertainty-aware perception, prediction and planning
 
-## Achref Doula  
-**PhD (2020–2025)**  
-*On Uncertainty-Aware Perception, Prediction & Planning*
+This programme combined uncertainty-aware learning and neuro-symbolic modelling for perception, forecasting and control in autonomous systems.
 
-This PhD focused on uncertainty-aware learning and neuro-symbolic modeling for perception and forecasting in autonomous systems. The work combines structured uncertainty representations with interpretable models for motion reasoning.
+**Selected systems**
 
-### Selected Systems & Code
-- **CLEAR-Command**  
-  A framework for uncertainty-aware command and control in autonomous systems.  
-  🔗 https://gitlab.com/achref.d/clear-command
+- [CLEAR-Command](https://gitlab.com/achref.d/clear-command): uncertainty-aware command and control for autonomous systems.
+- [KRPS](https://gitlab.com/achref.d/krps): structured planning and reasoning integrating perception with symbolic decision-making.
+- [NeSyMoF](https://gitlab.com/achref.d/nesymof): neuro-symbolic motion forecasting with explicit symbolic structure.
 
-- **KRPS**  
-  A structured planning and reasoning system integrating uncertainty-aware perception with symbolic decision-making.  
-  🔗 https://gitlab.com/achref.d/krps
+**My role:** scientific supervision, research direction, model design and publication strategy.
 
-- **NeSyMoF** – Neuro-Symbolic Motion Forecasting  
-  A neuro-symbolic approach to motion forecasting that combines learned representations with explicit symbolic structure.  
-  🔗 https://gitlab.com/achref.d/nesymof
+## Thomas Kreutz · PhD 2022–2025
 
-**My role:** Scientific supervision, research direction, model design, and publication strategy.
+### LiDAR- and IMU-based human-centric scene understanding
 
----
+This programme investigated LiDAR-first perception, multimodal embeddings and spatio-temporal modelling for activity understanding and crowd simulation.
 
-## Thomas Kreutz  
-**PhD (2022–2025)**  
-*LiDAR- and IMU-Based Human-Centric Scene Understanding*
+**Selected systems**
 
-This PhD investigated human-centric scene understanding using LiDAR-first perception, multimodal embeddings, and spatio-temporal modeling, with applications to activity recognition and crowd simulation.
+- [UMOSMOTS](https://github.com/thkreutz/umosmots): unsupervised 4D LiDAR moving-object segmentation using multivariate occupancy time series.
+- [Crowd Orchestration Simulator](https://github.com/thkreutz/crowdorchestrationsim): spatio-temporal modelling and orchestration of crowd dynamics.
+- [DeSPITE](https://github.com/thkreutz/despite): deep skeleton, point-cloud, IMU and text embeddings for human-activity understanding.
 
-### Selected Systems & Code
-- **UMOSMOTS**  
-  Unsupervised 4D LiDAR moving object segmentation in stationary settings using multivariate occupancy time series.  
-  🔗 https://github.com/thkreutz/umosmots
-
-- **Crowd Orchestration Simulator**  
-  A simulation framework for modeling and orchestrating crowd dynamics with spatio-temporal spawn processes.  
-  🔗 https://github.com/thkreutz/crowdorchestrationsim
-
-- **DeSPITE**  
-  Contrastive deep skeleton–pointcloud–IMU–text embeddings for advanced human activity understanding.  
-  🔗 https://github.com/thkreutz/despite
-
-**My role:** Scientific supervision, conceptual framing, representation design, and coordination with publication and collaboration partners.
+**My role:** scientific supervision, conceptual framing, representation design and coordination with publication and collaboration partners.

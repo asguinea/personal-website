@@ -1,246 +1,30 @@
-<!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
-
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="noindex, nofollow">
-<title>Research | Alejandro Sanchez Guinea</title>
-<meta name="keywords" content="">
-<meta name="description" content="My research provides the technical and conceptual foundation for my current work as a founder building decision control infrastructure for AI systems under uncertainty.
-Trustworthy &amp; Uncertainty-Aware AI
-I develop methods for uncertainty quantification and conformal prediction that allow AI systems to reason about confidence, risk, and failure modes. A key aspect of this work is understanding how uncertainty should be represented, propagated, and communicated to human decision-makers.
-LiDAR-First Multimodal Perception
-A recurring theme in my work is LiDAR-first perception, motivated by privacy, robustness, and geometric fidelity. I study how LiDAR can be combined with IMU, temporal occupancy representations, and symbolic abstractions to support reliable scene understanding in urban and infrastructure settings.">
-<meta name="author" content="Alejandro Sanchez Guinea">
-<link rel="canonical" href="http://localhost:1313/research/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
-<link rel="icon" href="http://localhost:1313/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
-<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
-<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="http://localhost:1313/research/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
-        }
-
-    </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
-</script>
-</head>
-<body id="top">
-    <header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="http://localhost:1313/" accesskey="h" title="Alejandro Sanchez Guinea (Alt + H)">Alejandro Sanchez Guinea</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="http://localhost:1313/research/" title="Research">
-                    <span class="active">Research</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/supervision/" title="Supervised PhD Projects">
-                    <span>Supervised PhD Projects</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/code/" title="Code &amp; Systems">
-                    <span>Code &amp; Systems</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/publications/" title="Publications">
-                    <span>Publications</span>
-                </a>
-            </li>
-            <li>
-                <a href="http://localhost:1313/contact/" title="Contact">
-                    <span>Contact</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
-
-<article class="post-single">
-  <header class="post-header">
-    
-    <h1 class="post-title entry-hint-parent">
-      Research
-    </h1>
-    <div class="post-meta"><span>Alejandro Sanchez Guinea</span>
-
-</div>
-  </header> 
-  <div class="post-content"><p>My research provides the <strong>technical and conceptual foundation</strong> for my current work as a founder building decision control infrastructure for AI systems under uncertainty.</p>
-<h3 id="trustworthy--uncertainty-aware-ai">Trustworthy &amp; Uncertainty-Aware AI<a hidden class="anchor" aria-hidden="true" href="#trustworthy--uncertainty-aware-ai">#</a></h3>
-<p>I develop methods for uncertainty quantification and conformal prediction that allow AI systems to reason about confidence, risk, and failure modes. A key aspect of this work is understanding how uncertainty should be represented, propagated, and communicated to human decision-makers.</p>
-<h3 id="lidar-first-multimodal-perception">LiDAR-First Multimodal Perception<a hidden class="anchor" aria-hidden="true" href="#lidar-first-multimodal-perception">#</a></h3>
-<p>A recurring theme in my work is <strong>LiDAR-first perception</strong>, motivated by privacy, robustness, and geometric fidelity. I study how LiDAR can be combined with IMU, temporal occupancy representations, and symbolic abstractions to support reliable scene understanding in urban and infrastructure settings.</p>
-<h3 id="neuro-symbolic--language-like-representations">Neuro-Symbolic &amp; Language-Like Representations<a hidden class="anchor" aria-hidden="true" href="#neuro-symbolic--language-like-representations">#</a></h3>
-<p>Beyond purely statistical models, I explore <strong>neuro-symbolic and structured representations</strong> for motion forecasting and planning. These representations aim to make learned models more interpretable, verifiable, and compatible with explicit safety constraints.</p>
-<h3 id="human-centered--immersive-ai">Human-Centered &amp; Immersive AI<a hidden class="anchor" aria-hidden="true" href="#human-centered--immersive-ai">#</a></h3>
-<p>I also investigate how AI system outputs—particularly uncertainty—should be visualized and interacted with, including through AR/VR and immersive analytics, to support situational awareness and informed decision-making.</p>
-<p>Across these themes, my work spans the full autonomy pipeline: from perception and representation to forecasting, planning, and human oversight.</p>
-
-
-  </div>
-
-  <footer class="post-footer">
-    <ul class="post-tags">
-    </ul>
-  </footer>
-</article>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2026 <a href="http://localhost:1313/">Alejandro Sanchez Guinea</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
-        
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
-        
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-</body>
-
-</html>
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=theme-color content="#f4f6f8"><title>Independent research | Alejandro Sanchez Guinea</title><meta name=description content="Research on foundation models, computer vision, uncertainty and risk control, computer graphics, and intelligence, developed through theory, experiments and reproducible public software."><meta property="og:type" content="website"><meta property="og:title" content="Independent research | Alejandro Sanchez Guinea"><meta property="og:description" content="Research on foundation models, computer vision, uncertainty and risk control, computer graphics, and intelligence, developed through theory, experiments and reproducible public software."><meta property="og:image" content="https://www.alejandrosanchezguinea.com/og.png"><meta property="og:image:width" content="1731"><meta property="og:image:height" content="909"><meta name=twitter:card content="summary_large_image"><meta name=twitter:title content="Independent research | Alejandro Sanchez Guinea"><meta name=twitter:description content="Research on foundation models, computer vision, uncertainty and risk control, computer graphics, and intelligence, developed through theory, experiments and reproducible public software."><meta name=twitter:image content="https://www.alejandrosanchezguinea.com/og.png"><link rel=canonical href=https://www.alejandrosanchezguinea.com/research/><link rel=stylesheet href=/css/main.min.fd067487522e891a9703e483b52ae5230aa40a409882d0974f270f07b5cdcb02.css integrity="sha256-/QZ0h1IuiRqXA+SDtSrlIwqkCkCYgtCXTycPB7XNywI="></head><body class=interior><a class=skip-link href=#main>Skip to content</a><header class=site-header><div class="shell nav-wrap"><a class=brand href=/ aria-label="Alejandro Sanchez Guinea, home"><span class=brand-copy><strong>Alejandro Sanchez Guinea</strong>
+</span></a><button class=nav-toggle type=button aria-expanded=false aria-controls=site-nav>Menu</button><nav id=site-nav class=site-nav aria-label="Main navigation"><a href=/about/>About</a>
+<a class="nav-cta js-contact-open" href=/contact/>Contact <span aria-hidden=true>↗</span></a></nav></div></header><main id=main><article class=independent-research-page><section class=research-role-hero><div class=shell><div class=research-role-hero-panel><div class=research-role-hero-copy><p class="eyebrow light">Independent research programme</p><h1>Independent Research Scientist</h1><p class=research-role-deck>My work spans five connected directions: foundation models, computer vision, uncertainty quantification and risk control, computer graphics, and intelligence.</p><div class=research-role-actions><a class="button button-light" href=#research-agenda>Explore the agenda <span aria-hidden=true>↓</span></a>
+<a class=research-role-text-link href=https://github.com/asguinea>View public research <span aria-hidden=true>↗</span></a></div></div></div><div class=research-role-scope aria-label="Research programme scope"><div><span>Representation and learning</span><strong>What structure makes knowledge reusable?</strong></div><div><span>Evidence and reliability</span><strong>What can a system justify and safely do?</strong></div><div><span>Intelligence and abstraction</span><strong>What lies beyond current computational models?</strong></div></div></div></section><div class="research-role-body shell prose"><section class=research-agenda-section id=research-agenda><header class=research-page-heading><h2>Research agenda</h2></header><div class="agenda-grid compact-agenda-grid"><article class=agenda-primary><span>01</span><h2>Foundation models</h2><p>What representational structure makes broad transfer possible? This line tests whether recurrent, compositional representations are a prerequisite for foundation-model behaviour beyond language.</p><a class=agenda-programme-link href=#foundation-model-repositories>View public work <span aria-hidden=true>↓</span></a></article><article><span>02</span><h2>Computer vision</h2><p>How can visual evidence support inspectable decisions and structured world models? This line spans finite-sample auditing, symbolic 4D scene representations and persistent motion models for video and LiDAR.</p><a class=agenda-programme-link href=#computer-vision-repositories>View public work <span aria-hidden=true>↓</span></a></article><article><span>03</span><h2>Uncertainty quantification and risk control</h2><p>Finite-sample calibration, distribution shift, expert disagreement and sequential decision workflows across medical, social and incident-analysis settings.</p><a class=agenda-programme-link href=#uncertainty-repositories>View public work <span aria-hidden=true>↓</span></a></article><article><span>04</span><h2>Computer graphics</h2><p>Structured representations for static and dynamic 3D scenes, including executable scene grammars, Gaussian scene experiments and procedural motion.</p><a class=agenda-programme-link href=#computer-graphics-repositories>View public work <span aria-hidden=true>↓</span></a></article><article class=agenda-intelligence><span>05</span><h2>Intelligence</h2><p>Two connected programmes: a general theory of how natural intelligence constructs and recursively reuses abstractions, and a focused investigation of whether abstraction can reduce computational complexity.</p><a class=agenda-card-link href=/research/intelligence/>Explore the research direction <span aria-hidden=true>→</span></a></article></div></section><section class=research-evidence id=public-repositories><header class=research-evidence-intro><div><h2>Research projects and artifacts</h2></div><div><p>Current projects and public repositories connect the agenda to concrete methods, experiments, software and explicit limitations.</p><a href=https://github.com/asguinea>View the complete GitHub profile <span aria-hidden=true>↗</span></a></div></header><section class=research-programme id=foundation-model-repositories><header class=research-programme-heading><span>01</span><div><h3>Foundation models</h3><p>What makes a representation foundation-ready, so that learning can accumulate across contexts and familiar units can support genuinely new combinations?</p></div></header><div class=research-repo-grid><a href=https://github.com/asguinea/motifshift><small>Foundation-readiness diagnostics</small><h4>MotifShift</h4><p>Controlled experiments test cross-context unit reuse, distributional stability, sequence recombination and transfer across trajectories, gridworld replay and physical fields.</p><b>View repository <span aria-hidden=true>↗</span></b>
+</a><a href=https://github.com/asguinea/reusable-vision-representations><small>Visual representations</small><h4>Reusable Vision Representations</h4><p>Measures selectivity, cross-context portability and held-out compositional transfer, including where specialization through depth begins to reduce reuse.</p><b>View repository <span aria-hidden=true>↗</span></b></a></div></section><section class=research-programme id=computer-vision-repositories><header class=research-programme-heading><span>02</span><div><h3>Computer vision</h3><p>Auditing visual evidence and learning structured representations of scenes and motion from images, video and LiDAR.</p></div></header><div class=research-repo-grid><a href=https://github.com/asguinea/finite-sample-vision-auditing><small>Public repository · Evidence auditing</small><h4>Finite-Sample Vision Auditing</h4><p>Exact decision and influence certificates, contextual contribution estimates and integrity-checked experiments for studying spatial decision stability and reserve evidence.</p><b>View repository <span aria-hidden=true>↗</span></b></a><article class=research-project-card><small>Current project · Structured 4D vision</small><h4>Beyond the Radiance</h4><p>Spatio-temporal scene grammars that turn visual evidence into compact, editable programs of structure, motion and interaction.</p></article><article class=research-project-card><small>Current project · Video understanding</small><h4>Learning 3D Tapes from Video</h4><p>A symbolic, compositional representation that joins spatial layout, object semantics and procedural motion for replay, editing and simulation.</p></article><article class=research-project-card><small>Current project · LiDAR motion</small><h4>Motion Tunnels</h4><p>Probabilistic 4D motion representations designed to preserve object identity and continuity through sparse observations and occlusion.</p></article></div></section><section class=research-programme id=uncertainty-repositories><header class=research-programme-heading><span>03</span><div><h3>Uncertainty quantification and risk control</h3><p>When does a calibrated policy remain useful, how does it fail under changing conditions, and what evidence is needed to recalibrate it?</p></div></header><div class=research-repo-grid><a href=https://github.com/asguinea/shift-aware-risk-control><small>Context and distribution shift</small><h4>Shift-Aware Risk Control</h4><p>Global, context-transfer and context-weighted risk-control methods with audits for simultaneous validity, transfer penalties and data leakage.</p><b>View repository <span aria-hidden=true>↗</span></b>
+</a><a href=https://github.com/asguinea/conformal-pathways><small>Sequential workflows</small><h4>Conformal Pathways</h4><p>Result-aware branching workflows that measure reference retention, selected-rule violations, abstention and diagnostic-test use separately.</p><b>View repository <span aria-hidden=true>↗</span></b>
+</a><a href=https://github.com/asguinea/medical-genai-beyond-factuality><small>Consequence-aware evaluation</small><h4>Medical GenAI Beyond Factuality</h4><p>Separates evidence support from potential clinical consequence and compares consequence-selective evaluation with uniform factuality filtering.</p><b>View repository <span aria-hidden=true>↗</span></b>
+</a><a href=/eyetrustai/#research-programme><small>EyeTrustAI research agenda</small><h4>Closed-Loop Conformal Risk Control</h4><p>A broader programme on how risk certificates transfer, govern action, receive feedback and adapt under changing deployment conditions.</p><b>View research agenda <span aria-hidden=true>→</span></b></a></div></section><section class=research-programme id=computer-graphics-repositories><header class=research-programme-heading><span>04</span><div><h3>Computer graphics</h3><p>How can scenes and motion be represented as inspectable, editable and reproducible structures rather than opaque outputs?</p></div></header><div class="research-repo-grid research-repo-grid-three"><a href=https://github.com/asguinea/SceneGrammarKit><small>Executable scene structure</small><h4>SceneGrammarKit</h4><p>Deterministic split-and-repeat grammars for coarse semantic scene structure, with typed edits, bounded execution and headless rendering.</p><b>View repository <span aria-hidden=true>↗</span></b>
+</a><a href=https://github.com/asguinea/gaussweave><small>Structured 3D Gaussian scenes</small><h4>GaussWeave</h4><p>Reproducible tooling for structured 3D Gaussian experiments, including deterministic scenes and cameras, rendering adapters and artifact-integrity checks.</p><b>View repository <span aria-hidden=true>↗</span></b>
+</a><a href=https://github.com/asguinea/kinematicweave><small>Dynamic 3D representation</small><h4>KinematicWeave</h4><p>Persistent spatial records and procedural motion with exact and error-bounded trajectory codecs, semantic events and matched-budget evaluation.</p><b>View repository <span aria-hidden=true>↗</span></b></a></div></section></section><section class=risk-portfolio id=uncertainty-risk-control><header class=risk-portfolio-intro><p class=eyebrow>Active research portfolio</p><h2>Conformal risk control for deployed AI systems</h2><p>This programme asks how statistically valid risk guarantees can survive the conditions of real deployment: changing environments, adaptive policies, selective feedback, delayed labels and systems whose decisions alter the data they later observe.</p></header><div class=risk-track-grid><article><div class=risk-track-heading><span>Track I</span><h3>Certificates across environments</h3></div><p>How can a risk certificate remain meaningful when an AI system moves beyond the environment in which it was calibrated?</p><ul><li><strong>Contextual selective CRC:</strong> transferring release-risk guarantees to a new deployment context.</li><li><strong>Meta-conformal risk transfer:</strong> certifying learned relationships across a population of environments.</li><li><strong>Certificate survival under drift:</strong> determining when validity decays and a certificate must expire.</li><li><strong>Adaptive risk contracts:</strong> allowing loss definitions, subgroups and evidence rules to change without invalidating guarantees.</li></ul></article><article><div class=risk-track-heading><span>Track II</span><h3>Closed-loop AI control</h3></div><p>How can risk be controlled when AI actions, human review and the resulting evidence form a feedback loop?</p><ul><li><strong>Adaptive sequential conformal authorisation:</strong> allocating risk across multi-step AI workflows.</li><li><strong>CRC under policy-dependent feedback:</strong> preserving guarantees under selective release, delayed labels and review bias.</li><li><strong>Safe active auditing:</strong> allocating human review to improve future autonomy while retaining risk guarantees.</li><li><strong>Performative CRC:</strong> studying risk guarantees when the controller changes the environment it controls.</li></ul></article></div><div class=risk-flagship><div><span>Flagship synthesis</span><h3>Closed-Loop Conformal Risk Control</h3></div><p>A unified theory combining context shift, adaptive policies, selective feedback, certificate expiration and recalibration for deployed AI systems.</p></div><div class=risk-applications><span>Application branches</span><p><strong>Medical imaging</strong> for clinical deployment shift, <strong>autonomous systems and robotics</strong> for sequential control, and <strong>AI agents</strong> for multi-step language-enabled workflows.</p></div></section><h2 id=selected-publications-by-research-area>Selected publications by research area</h2><p>The selection below is organised around the first four areas of the research agenda. The <a href=https://dblp.org/pid/132/8925.html>complete indexed record is available on DBLP</a>.</p><div class=publication-groups id=publications><section><header><span>01</span><h2>Foundation models</h2></header><ul><li><strong>Motion as Language: Towards a Situation–Motion Language for Spatio-Temporal Learning.</strong> NeurIPS Workshops, 2025.</li><li><strong>Ophthalmology as a Lens for Trustworthy GenAI in Europe.</strong> NeurIPS Workshops, 2025.</li><li><strong>CLEAR-Command.</strong> NAACL System Demonstrations, 2025.</li><li><strong>AEXL: Enhancing Path Prediction with Active Explainable Learning via Large Language Models.</strong> CHI Extended Abstracts, 2025.</li></ul></section><section><header><span>02</span><h2>Computer vision</h2></header><ul><li><strong>DeSPITE: Deep Skeleton–Pointcloud–IMU–Text Embeddings.</strong> ICCV, 2025.</li><li><strong>NeSyMoF: A Neuro-Symbolic Model for Motion Forecasting.</strong> IROS, 2024.</li><li><strong>LiOn-XA: Unsupervised Domain Adaptation via LiDAR-Only Cross-Modal Adversarial Training.</strong> IROS, 2024.</li><li><strong>Unsupervised 4D LiDAR Moving Object Segmentation.</strong> WACV, 2023.</li><li><strong>Improving Wearable-Based Activity Recognition Using Image Representations.</strong> Sensors, 2022.</li><li><strong>VIDENS: Vision-Based User Identification from Inertial Sensors.</strong> ISWC, 2021.</li></ul></section><section><header><span>03</span><h2>Uncertainty quantification and risk control</h2></header><ul><li><strong>SafePath: Conformal Prediction for Safe LLM-Based Autonomous Navigation.</strong> arXiv, 2025.</li><li><strong>Conformal Prediction for Semantically-Aware Autonomous Perception in Urban Environments.</strong> CoRL, 2024.</li><li><strong>AR-CP: Uncertainty-Aware Perception in Adverse Conditions.</strong> CVPR Workshops, 2024.</li><li><strong>Can You Handle the Truth? Investigating AR-Based Communication of Deep-Learning Uncertainty.</strong> ISMAR, 2023.</li><li><strong>Visualization of Machine Learning Uncertainty in AR-Based See-Through Applications.</strong> AIVR, 2022.</li></ul></section><section><header><span>04</span><h2>Computer graphics</h2></header><ul><li><strong>Whenever, Wherever: Orchestrating Crowd Simulations with Spatio-Temporal Spawn Dynamics.</strong> ICRA, 2025.</li><li><strong>PointCloudLab: 3D Point Cloud Annotation with Visual Aids and Immersion.</strong> ICRA, 2023.</li><li><strong>VR-Surv: A VR-Based Privacy Preserving Surveillance System.</strong> CHI Extended Abstracts, 2022.</li></ul></section></div><p>Earlier work in software engineering, continuous experimentation and pervasive systems remains part of the broader publication record and will be integrated more fully in a later revision.</p><div class="professional-links research-links"><a href=https://dblp.org/pid/132/8925.html>Complete DBLP record <span>↗</span></a>
+<a href=https://github.com/asguinea>Public research on GitHub <span>↗</span></a>
+<a href=/supervision/>Supervised research <span>→</span></a>
+<a class=js-contact-open data-contact-topic=collaboration data-contact-interest="Independent research collaboration" href="/contact/?topic=collaboration&amp;interest=Independent%20research%20collaboration">Discuss research collaboration <span>↗</span></a></div></div></article></main><footer class="site-footer site-footer-minimal"><div class="shell footer-bottom"><span>© Alejandro Sanchez Guinea 2026</span></div></footer><div class=unified-contact-backdrop hidden></div><section class=unified-contact-dialog id=unified-contact-dialog role=dialog aria-modal=true aria-labelledby=unified-contact-title hidden><header class=unified-contact-header><div><p class=micro-label>Contact</p><h2 id=unified-contact-title>What would you like to discuss?</h2><p>Select the option that best matches your enquiry. The form will adapt to it.</p></div><button class=unified-contact-close type=button aria-label="Close contact form">×</button></header><form class=unified-contact-form novalidate data-contact-endpoint><input type=hidden name=interest><fieldset class=unified-contact-topic><legend class=visually-hidden>Type of enquiry</legend><div class=unified-contact-options><label><input type=radio name=topic value=engagement required>
+<span><strong>Discuss an engagement</strong><small>AI & innovation or R&amp;D advisory</small></span>
+</label><label><input type=radio name=topic value=role required>
+<span><strong>Discuss a role</strong><small>Senior, fractional or organisational leadership</small></span>
+</label><label><input type=radio name=topic value=collaboration required>
+<span><strong>Venture or research</strong><small>EyeTrustAI, Burrito’s Labs or independent research</small></span>
+</label><label><input type=radio name=topic value=other required>
+<span><strong>Other</strong><small>Speaking or another enquiry</small></span></label></div><button class=unified-contact-change type=button hidden>Change</button></fieldset><div class=unified-contact-details hidden><p class=unified-contact-context role=status aria-live=polite></p><div class=unified-contact-identity><div class=unified-contact-field><label for=unified-contact-name>Name <span>(Required)</span></label>
+<input id=unified-contact-name name=name type=text maxlength=100 autocomplete=name required></div><div class=unified-contact-field><label for=unified-contact-email>Email for reply <span>(Required)</span></label>
+<input id=unified-contact-email name=email type=email maxlength=254 autocomplete=email required></div></div><div class=unified-contact-identity><div class=unified-contact-field><label for=unified-contact-role>Role <span>(Required)</span></label>
+<input id=unified-contact-role name=role type=text maxlength=120 autocomplete=organization-title required></div><div class=unified-contact-field><label for=unified-contact-organisation>Organisation or project <span>(Required)</span></label>
+<input id=unified-contact-organisation name=organisation type=text maxlength=160 autocomplete=organization required></div></div><div class=unified-contact-field><label for=unified-contact-project-url>Company or project website <span>(Optional)</span></label>
+<input id=unified-contact-project-url name=project_url type=url maxlength=500 autocomplete=url placeholder=https://></div><div class="unified-contact-field unified-contact-collaboration" hidden><label for=unified-contact-collaboration-area>Which area does this concern? <span>(Required)</span></label>
+<select id=unified-contact-collaboration-area name=collaboration_area><option value selected disabled>Select an area</option><option value=eyetrustai>EyeTrustAI</option><option value=burritos-labs>Burrito’s Labs</option><option value=independent-research>Independent research collaboration</option></select></div><div class=unified-contact-field><label for=unified-contact-message><span class=unified-contact-message-label>Message</span> <span>(Required)</span></label>
+<textarea id=unified-contact-message name=message rows=5 minlength=20 maxlength=3000 required placeholder="Briefly describe what you would like to discuss."></textarea>
+<small>20 to 3,000 characters. Please do not include sensitive information.</small></div><div class=unified-contact-field><label for=unified-contact-timeframe>Expected timeframe <span>(Required)</span></label>
+<select id=unified-contact-timeframe name=timeframe required><option value selected disabled>Select a timeframe</option><option value=within-one-month>Within one month</option><option value=one-to-three-months>One to three months</option><option value=three-to-six-months>Three to six months</option><option value=later-or-exploring>Later or currently exploring</option></select></div><div class=unified-contact-honeypot aria-hidden=true><label for=unified-contact-confirmation>Leave this field empty</label>
+<input id=unified-contact-confirmation name=confirmation type=text tabindex=-1 autocomplete=off></div><div class=unified-contact-footer><p>Your details will be used only to read and reply to this message. No mailing list.</p><button type=submit>Send enquiry <span aria-hidden=true>→</span></button></div><p class=unified-contact-status role=status aria-live=polite></p></div><p class=unified-contact-email-fallback>You can also connect through <a href=https://www.linkedin.com/in/alejandro-sanchez-guinea/>LinkedIn</a>.</p></form></section><script src="/js/site.js?v=20260913-contact-list" defer></script></body></html>

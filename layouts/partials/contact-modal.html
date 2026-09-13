@@ -1,0 +1,108 @@
+<div class="unified-contact-backdrop" hidden></div>
+<section class="unified-contact-dialog" id="unified-contact-dialog" role="dialog" aria-modal="true" aria-labelledby="unified-contact-title" hidden>
+  <header class="unified-contact-header">
+    <div>
+      <p class="micro-label">Contact</p>
+      <h2 id="unified-contact-title">What would you like to discuss?</h2>
+      <p>Select the option that best matches your enquiry. The form will adapt to it.</p>
+    </div>
+    <button class="unified-contact-close" type="button" aria-label="Close contact form">×</button>
+  </header>
+
+  <form class="unified-contact-form" novalidate data-contact-endpoint="">
+    <input type="hidden" name="interest" value="">
+
+    <fieldset class="unified-contact-topic">
+      <legend class="visually-hidden">Type of enquiry</legend>
+      <div class="unified-contact-options">
+        <label>
+          <input type="radio" name="topic" value="engagement" required>
+          <span><strong>Discuss an engagement</strong><small>AI &amp; innovation or R&amp;D advisory</small></span>
+        </label>
+        <label>
+          <input type="radio" name="topic" value="role" required>
+          <span><strong>Discuss a role</strong><small>Senior, fractional or organisational leadership</small></span>
+        </label>
+        <label>
+          <input type="radio" name="topic" value="collaboration" required>
+          <span><strong>Venture or research</strong><small>EyeTrustAI, Burrito’s Labs or independent research</small></span>
+        </label>
+        <label>
+          <input type="radio" name="topic" value="other" required>
+          <span><strong>Other</strong><small>Speaking or another enquiry</small></span>
+        </label>
+      </div>
+      <button class="unified-contact-change" type="button" hidden>Change</button>
+    </fieldset>
+
+    <div class="unified-contact-details" hidden>
+      <p class="unified-contact-context" role="status" aria-live="polite"></p>
+
+      <div class="unified-contact-identity">
+        <div class="unified-contact-field">
+          <label for="unified-contact-name">Name <span>(Required)</span></label>
+          <input id="unified-contact-name" name="name" type="text" maxlength="100" autocomplete="name" required>
+        </div>
+        <div class="unified-contact-field">
+          <label for="unified-contact-email">Email for reply <span>(Required)</span></label>
+          <input id="unified-contact-email" name="email" type="email" maxlength="254" autocomplete="email" required>
+        </div>
+      </div>
+
+      <div class="unified-contact-identity">
+        <div class="unified-contact-field">
+          <label for="unified-contact-role">Role <span>(Required)</span></label>
+          <input id="unified-contact-role" name="role" type="text" maxlength="120" autocomplete="organization-title" required>
+        </div>
+        <div class="unified-contact-field">
+          <label for="unified-contact-organisation">Organisation or project <span>(Required)</span></label>
+          <input id="unified-contact-organisation" name="organisation" type="text" maxlength="160" autocomplete="organization" required>
+        </div>
+      </div>
+
+      <div class="unified-contact-field">
+        <label for="unified-contact-project-url">Company or project website <span>(Optional)</span></label>
+        <input id="unified-contact-project-url" name="project_url" type="url" maxlength="500" autocomplete="url" placeholder="https://">
+      </div>
+
+      <div class="unified-contact-field unified-contact-collaboration" hidden>
+        <label for="unified-contact-collaboration-area">Which area does this concern? <span>(Required)</span></label>
+        <select id="unified-contact-collaboration-area" name="collaboration_area">
+          <option value="" selected disabled>Select an area</option>
+          <option value="eyetrustai">EyeTrustAI</option>
+          <option value="burritos-labs">Burrito’s Labs</option>
+          <option value="independent-research">Independent research collaboration</option>
+        </select>
+      </div>
+
+      <div class="unified-contact-field">
+        <label for="unified-contact-message"><span class="unified-contact-message-label">Message</span> <span>(Required)</span></label>
+        <textarea id="unified-contact-message" name="message" rows="5" minlength="20" maxlength="3000" required placeholder="Briefly describe what you would like to discuss."></textarea>
+        <small>20 to 3,000 characters. Please do not include sensitive information.</small>
+      </div>
+
+      <div class="unified-contact-field">
+        <label for="unified-contact-timeframe">Expected timeframe <span>(Required)</span></label>
+        <select id="unified-contact-timeframe" name="timeframe" required>
+          <option value="" selected disabled>Select a timeframe</option>
+          <option value="within-one-month">Within one month</option>
+          <option value="one-to-three-months">One to three months</option>
+          <option value="three-to-six-months">Three to six months</option>
+          <option value="later-or-exploring">Later or currently exploring</option>
+        </select>
+      </div>
+
+      <div class="unified-contact-honeypot" aria-hidden="true">
+        <label for="unified-contact-confirmation">Leave this field empty</label>
+        <input id="unified-contact-confirmation" name="confirmation" type="text" tabindex="-1" autocomplete="off">
+      </div>
+
+      <div class="unified-contact-footer">
+        <p>Your details will be used only to read and reply to this message. No mailing list.</p>
+        <button type="submit">Send enquiry <span aria-hidden="true">→</span></button>
+      </div>
+      <p class="unified-contact-status" role="status" aria-live="polite"></p>
+    </div>
+    <p class="unified-contact-email-fallback">You can also connect through <a href="{{ site.Params.linkedin }}">LinkedIn</a>.</p>
+  </form>
+</section>

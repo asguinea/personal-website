@@ -1,0 +1,24 @@
+{{ define "main" }}
+<article class="about-profile-page">
+  <section class="about-profile-hero">
+    <div class="shell about-profile-grid">
+      <img src="/img/alejandro-about.jpg" width="1200" height="1800" alt="Portrait of Alejandro Sanchez Guinea">
+      <div class="about-profile-copy">
+        <p class="eyebrow light">About</p>
+        <h1>Research, technology and product creation</h1>
+        <p>I set scientific direction, build original software and games, pursue independent research in AI, uncertainty and intelligence, and help organisations turn ambitious technical ideas into clear programmes and products.</p>
+        <div class="about-profile-focus" aria-label="Current professional focus">
+          <span>Scientific direction</span>
+          <span>Independent research</span>
+          <span>Product building</span>
+          <span>Strategic advisory</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="about-profile-body shell prose">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

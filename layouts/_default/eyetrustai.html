@@ -1,0 +1,172 @@
+{{ define "main" }}
+<article class="science-role-page">
+  <section class="science-role-hero">
+    <div class="shell">
+      <div class="science-role-hero-panel">
+        <div class="science-role-hero-copy">
+          <p class="eyebrow light">Scientific direction for deployed AI</p>
+          <h1>Chief Scientist at EyeTrustAI</h1>
+          <p class="science-role-deck">I created and lead EyeTrustAI’s research programme on risk control for AI systems that act, adapt and operate under changing conditions.</p>
+          <p class="science-role-position">From foundational questions to reproducible evidence and product architecture.</p>
+          <div class="science-role-actions">
+            <a class="button button-light" href="https://eyetrustai.com/">Visit EyeTrustAI <span aria-hidden="true">↗</span></a>
+            <a class="science-role-text-link" href="#public-research">Explore the public research <span aria-hidden="true">↓</span></a>
+          </div>
+        </div>
+        <aside class="science-thesis-card">
+          <span>Research thesis</span>
+          <h2>Static guarantees are not enough for deployed AI.</h2>
+          <p>Risk certificates must remain meaningful as systems act, receive feedback and encounter change.</p>
+          <ol aria-label="Closed-loop risk-control cycle">
+            <li><b>01</b><strong>Observe</strong></li>
+            <li><b>02</b><strong>Certify</strong></li>
+            <li><b>03</b><strong>Act</strong></li>
+            <li><b>04</b><strong>Adapt</strong></li>
+          </ol>
+        </aside>
+      </div>
+      <div class="science-role-scope" aria-label="Chief Scientist responsibilities">
+        <div><span>Research direction</span><strong>Define the scientific programme and priorities.</strong></div>
+        <div><span>Methods and evidence</span><strong>Direct theory, experiments and reproducibility.</strong></div>
+        <div><span>Product translation</span><strong>Turn research into risk-control primitives.</strong></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="science-role-section science-programme" id="research-programme">
+    <div class="shell">
+      <header class="science-section-heading">
+        <div>
+          <p class="eyebrow">Research programme</p>
+          <h2>Closed-loop conformal risk control</h2>
+        </div>
+        <p>The programme advances conformal risk control beyond static calibration and isolated predictions toward adaptive, deployed systems.</p>
+      </header>
+      <div class="science-track-grid">
+        <article>
+          <span>Track I</span>
+          <h3>Certificates across changing environments</h3>
+          <p class="science-track-question">Where is a risk certificate valid?</p>
+          <p>Transfer and maintain statistical guarantees when deployment context changes.</p>
+          <ul>
+            <li>Contextual selective risk control</li>
+            <li>Meta-conformal transfer</li>
+            <li>Certificate expiry under drift</li>
+            <li>Adaptive risk contracts</li>
+          </ul>
+        </article>
+        <article>
+          <span>Track II</span>
+          <h3>Control inside closed-loop AI systems</h3>
+          <p class="science-track-question">What happens once the certificate controls the system?</p>
+          <p>Study sequential action, selective feedback and policies that alter future data.</p>
+          <ul>
+            <li>Sequential conformal authorisation</li>
+            <li>Policy-dependent feedback</li>
+            <li>Safe active auditing</li>
+            <li>Performative risk control</li>
+          </ul>
+        </article>
+      </div>
+      <div class="science-convergence">
+        <span>Where the tracks converge</span>
+        <strong>Can a risk certificate transfer, act, receive feedback, adapt and remain statistically meaningful?</strong>
+      </div>
+    </div>
+  </section>
+
+  <section class="science-feature">
+    <div class="shell science-feature-grid">
+      <div class="science-feature-intro">
+        <p class="eyebrow light">Featured research advance</p>
+        <h2>Sequential safety for clinical decision pathways</h2>
+        <p>The work extends conformal prediction from isolated image outputs to multi-stage workflows in which diagnostic actions reveal information and shape later decisions.</p>
+        <a class="science-role-text-link" href="https://github.com/asguinea/conformal-pathways">View related reproducible research <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="science-feature-points">
+        <article>
+          <span>Scientific contribution</span>
+          <h3>Pathway-level guarantees</h3>
+          <p>The guarantee is pathway-level: at the target coverage, at least one guideline-consistent safe pathway remains reachable.</p>
+        </article>
+        <article>
+          <span>Decision structure</span>
+          <h3>Uncertainty across stages</h3>
+          <p>A shared miscoverage budget controls pruning as tests reveal information and the pathway evolves.</p>
+        </article>
+        <article>
+          <span>Empirical scope</span>
+          <h3>Five public datasets</h3>
+          <p>Ophthalmology studies examine pathway retention, decision risk and the operational effect of allocating uncertainty across stages.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="science-role-section science-evidence" id="public-research">
+    <div class="shell">
+      <header class="science-section-heading">
+        <div>
+          <p class="eyebrow">Public research evidence</p>
+          <h2>Validation across domains</h2>
+        </div>
+        <p>Public repositories make the methods, experiments, results and limitations inspectable.</p>
+      </header>
+      <div class="science-validation-grid">
+        <a href="https://github.com/asguinea/risk-controlled-medical-image-classification">
+          <span>Medical image classification</span>
+          <h3>Prediction-set usefulness</h3>
+          <p>Calibration support, reference labels and expert disagreement across four imaging studies.</p>
+          <b>View repository ↗</b>
+        </a>
+        <a href="https://github.com/asguinea/risk-controlled-medical-segmentation">
+          <span>Medical image segmentation</span>
+          <h3>Omission risk and transfer</h3>
+          <p>Expert disagreement, region size and the cost of recalibration across retinal datasets.</p>
+          <b>View repository ↗</b>
+        </a>
+        <a href="https://github.com/asguinea/risk-controlled-incident-analysis">
+          <span>Incident analysis</span>
+          <h3>Calibration over time</h3>
+          <p>Evidence requirements, controller ageing and recalibration in aviation and consumer-injury data.</p>
+          <b>View repository ↗</b>
+        </a>
+        <a href="https://github.com/asguinea/risk-controlled-social-media-analysis">
+          <span>Social media analysis</span>
+          <h3>Automation under error budgets</h3>
+          <p>Emotion, sentiment and crisis-triage policies that trade automatic action against human review.</p>
+          <b>View repository ↗</b>
+        </a>
+      </div>
+
+      <header class="science-system-heading">
+        <p class="eyebrow">Research translated into systems</p>
+        <h2>From certificates to operational control</h2>
+      </header>
+      <div class="science-system-grid">
+        <a href="https://github.com/asguinea/shift-aware-risk-control">
+          <div><span>Changing environments</span><h3>Shift-Aware Risk Control</h3></div>
+          <p>Global, context-transfer and context-weighted methods with explicit validity, transfer and leakage audits.</p>
+          <b>View repository ↗</b>
+        </a>
+        <a href="https://github.com/asguinea/coding-action-gate">
+          <div><span>Agent action control</span><h3>CodingActionGate</h3></div>
+          <p>A research prototype for inspecting proposed actions and routing them to proceed, defer, escalate or block.</p>
+          <b>View repository ↗</b>
+        </a>
+      </div>
+
+      <div class="science-role-final">
+        <div>
+          <p class="eyebrow light">EyeTrustAI</p>
+          <h2>The research programme informs the Risk Gate and its deployment model.</h2>
+        </div>
+        <div class="science-final-actions">
+          <a class="button button-light" href="https://eyetrustai.com/">Visit EyeTrustAI <span aria-hidden="true">↗</span></a>
+          <a class="science-role-text-link" href="/research/#uncertainty-risk-control">Explore the broader research <span aria-hidden="true">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</article>
+{{ end }}
