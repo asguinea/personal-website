@@ -2,6 +2,7 @@ baseURL = "https://www.alejandrosanchezguinea.com/"
 languageCode = "en-us"
 title = "Alejandro Sanchez Guinea | AI Innovation & R&D Leadership"
 enableRobotsTXT = true
+disableKinds = ["taxonomy", "term"]
 
 [params]
   author = "Alejandro Sanchez Guinea"

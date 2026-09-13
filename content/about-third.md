@@ -5,6 +5,9 @@ layout: "about-third"
 url: "/about/"
 aliases:
   - "/experience/"
+  - "/about-relaxed/"
+  - "/about-original/"
+  - "/about-third/"
 ---
 
 <section class="about-relaxed-section">
