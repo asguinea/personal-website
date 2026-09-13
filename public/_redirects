@@ -3,3 +3,7 @@
 /about-third/  /about/  301
 /experience/  /about/  301
 /publications/  /research/  301
+/categories/  /ideas/  301
+/categories/*  /ideas/  301
+/tags/  /ideas/  301
+/tags/*  /ideas/  301
