@@ -11,6 +11,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f4f6f8">
+  {{ with site.Params.googleSiteVerification }}<meta name="google-site-verification" content="{{ . }}">{{ end }}
   <title>{{ $metaTitle }}</title>
   <meta name="description" content="{{ $metaDescription }}">
   <meta property="og:type" content="{{ if and (eq .Section "ideas") .IsPage }}article{{ else }}website{{ end }}">
