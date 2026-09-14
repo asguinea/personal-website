@@ -14,6 +14,7 @@ disableKinds = ["taxonomy", "term"]
   orcid = "https://orcid.org/0000-0002-1860-0595"
   googleSiteVerification = "mlHJPq4CRSwEno3jfEQKTYNkGMrNRRbSU9BaP1SdLX4"
   email = "ale.sanchez.guinea@gmail.com"
+  turnstileSiteKey = "0x4AAAAAAEzlNdeKEon1XAcm"
 
 [menu]
   [[menu.main]]

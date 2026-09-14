@@ -13,6 +13,7 @@ const contactForm = document.querySelector('.unified-contact-form');
 const contactStatus = document.querySelector('.unified-contact-status');
 const contactContext = document.querySelector('.unified-contact-context');
 const contactInterest = document.querySelector('input[name="interest"]');
+const contactStartedAt = document.querySelector('input[name="started_at"]');
 const contactTopicInputs = [...document.querySelectorAll('input[name="topic"]')];
 const contactTopicFieldset = document.querySelector('.unified-contact-topic');
 const contactChange = document.querySelector('.unified-contact-change');
@@ -22,15 +23,14 @@ const contactCollaboration = document.querySelector('.unified-contact-collaborat
 const contactCollaborationSelect = document.querySelector('#unified-contact-collaboration-area');
 const contactMessageLabel = document.querySelector('.unified-contact-message-label');
 const contactMessage = document.querySelector('#unified-contact-message');
+const contactTurnstileContainer = document.querySelector('.unified-contact-turnstile');
 const contactOpeners = [...document.querySelectorAll('.js-contact-open')];
+const isLocalPreview = location.hostname === '127.0.0.1' || location.hostname === 'localhost';
+const productionTurnstileSiteKey = contactForm?.dataset.turnstileSiteKey || '';
+const localTurnstileSiteKey = '1x00000000000000000000AA';
 let contactReturnTarget = null;
-
-const contactTopicLabels = {
-  engagement: 'Advisory engagement',
-  role: 'Role or leadership opportunity',
-  collaboration: 'Venture or research collaboration',
-  other: 'Professional enquiry',
-};
+let contactTurnstileWidgetId = null;
+let contactTurnstileReadyPromise = null;
 
 const contactRouteAliases = {
   advisory: 'engagement',
@@ -59,6 +59,39 @@ const contactRoutes = {
     label: 'Message',
     placeholder: 'Briefly describe what you would like to discuss.',
   },
+};
+
+const loadContactTurnstile = () => {
+  if (window.turnstile) return Promise.resolve(window.turnstile);
+  if (contactTurnstileReadyPromise) return contactTurnstileReadyPromise;
+
+  contactTurnstileReadyPromise = new Promise((resolve, reject) => {
+    const callbackName = 'alejandroContactTurnstileReady';
+    window[callbackName] = () => resolve(window.turnstile);
+    const script = document.createElement('script');
+    script.src = `https://challenges.cloudflare.com/turnstile/v0/api.js?onload=${callbackName}&render=explicit`;
+    script.async = true;
+    script.defer = true;
+    script.onerror = () => reject(new Error('Turnstile failed to load'));
+    document.head.append(script);
+  });
+
+  return contactTurnstileReadyPromise;
+};
+
+const prepareContactTurnstile = async () => {
+  if (!contactTurnstileContainer || contactTurnstileWidgetId !== null) return;
+  try {
+    const turnstile = await loadContactTurnstile();
+    contactTurnstileWidgetId = turnstile.render(contactTurnstileContainer, {
+      sitekey: isLocalPreview ? localTurnstileSiteKey : productionTurnstileSiteKey,
+      action: 'contact',
+      appearance: 'interaction-only',
+      theme: 'light',
+    });
+  } catch {
+    contactStatus.textContent = 'Spam protection could not load. Please try again or use the direct email link below.';
+  }
 };
 
 const setContactSelection = (topic, interest) => {
@@ -93,6 +126,7 @@ const setContactSelection = (topic, interest) => {
   }
   if (contactMessageLabel) contactMessageLabel.textContent = route?.label || 'Message';
   if (contactMessage) contactMessage.placeholder = route?.placeholder || 'Briefly describe what you would like to discuss.';
+  if (route) prepareContactTurnstile();
 };
 
 setContactSelection('', '');
@@ -101,6 +135,7 @@ const openContact = ({ topic = '', interest = '', returnTarget = null } = {}) =>
   if (!contactDialog || !contactBackdrop) return;
   contactReturnTarget = returnTarget;
   setContactSelection(topic, interest);
+  if (contactStartedAt) contactStartedAt.value = String(Date.now());
   contactStatus.textContent = '';
   contactDialog.hidden = false;
   contactBackdrop.hidden = false;
@@ -159,58 +194,28 @@ contactForm?.addEventListener('submit', async (event) => {
     return;
   }
 
+  if (isLocalPreview) {
+    contactStatus.textContent = 'Local preview only. Your message was not sent.';
+    return;
+  }
+
   const endpoint = contactForm.dataset.contactEndpoint;
-  const contactEmail = contactForm.dataset.contactEmail;
   if (!endpoint) {
-    const payload = Object.fromEntries(new FormData(contactForm).entries());
-    if (payload.confirmation) {
-      contactForm.reset();
-      setContactSelection('', '');
-      contactStatus.textContent = 'Thank you. Your enquiry has been prepared.';
-      return;
-    }
-    if (!contactEmail) {
-      contactStatus.textContent = 'Email delivery is unavailable. Please use the direct email link below.';
-      return;
-    }
+    contactStatus.textContent = 'Message delivery is temporarily unavailable. Please use the direct email link below.';
+    return;
+  }
 
-    const collaborationLabels = {
-      eyetrustai: 'EyeTrustAI',
-      'burritos-labs': 'Burrito’s Labs',
-      'independent-research': 'Independent research collaboration',
-    };
-    const timeframeLabels = {
-      'within-one-month': 'Within one month',
-      'one-to-three-months': 'One to three months',
-      'three-to-six-months': 'Three to six months',
-      'later-or-exploring': 'Later or currently exploring',
-    };
-    const subjectParts = [contactTopicLabels[payload.topic] || 'Professional enquiry'];
-    if (payload.organisation) subjectParts.push(payload.organisation);
-    const bodyLines = [
-      `Contact route: ${contactTopicLabels[payload.topic] || payload.topic}`,
-      payload.interest ? `Area of interest: ${payload.interest}` : '',
-      payload.collaboration_area ? `Collaboration area: ${collaborationLabels[payload.collaboration_area] || payload.collaboration_area}` : '',
-      '',
-      `Name: ${payload.name}`,
-      `Email: ${payload.email}`,
-      `Role: ${payload.role}`,
-      `Organisation or project: ${payload.organisation}`,
-      payload.project_url ? `Website: ${payload.project_url}` : '',
-      `Expected timeframe: ${timeframeLabels[payload.timeframe] || payload.timeframe}`,
-      '',
-      `${contactRoutes[payload.topic]?.label || 'Message'}:`,
-      payload.message,
-    ].filter((line, index, lines) => line || (index > 0 && lines[index - 1]));
-
-    const mailto = `mailto:${contactEmail}?subject=${encodeURIComponent(subjectParts.join(' | '))}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
-    contactStatus.textContent = 'Your email app should open with the enquiry prepared. Review it and send when ready.';
-    window.location.href = mailto;
+  const turnstileToken = window.turnstile && contactTurnstileWidgetId !== null
+    ? window.turnstile.getResponse(contactTurnstileWidgetId)
+    : '';
+  if (!turnstileToken) {
+    contactStatus.textContent = 'Please complete the spam-protection check and try again.';
     return;
   }
 
   const submitButton = contactForm.querySelector('button[type="submit"]');
   const payload = Object.fromEntries(new FormData(contactForm).entries());
+  payload.turnstileToken = turnstileToken;
   submitButton.disabled = true;
   contactStatus.textContent = 'Sending…';
 
@@ -224,9 +229,12 @@ contactForm?.addEventListener('submit', async (event) => {
     if (!response.ok || !result.ok) throw new Error('Delivery failed');
     contactForm.reset();
     setContactSelection('', '');
+    if (contactStartedAt) contactStartedAt.value = String(Date.now());
     contactStatus.textContent = 'Thank you. Your enquiry has been sent.';
+    if (window.turnstile && contactTurnstileWidgetId !== null) window.turnstile.reset(contactTurnstileWidgetId);
   } catch {
-    contactStatus.textContent = 'The enquiry could not be sent. Please use the LinkedIn link below.';
+    contactStatus.textContent = 'The enquiry could not be sent. Please use the direct email link below.';
+    if (window.turnstile && contactTurnstileWidgetId !== null) window.turnstile.reset(contactTurnstileWidgetId);
   } finally {
     submitButton.disabled = false;
   }

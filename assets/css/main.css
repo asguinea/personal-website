@@ -445,6 +445,8 @@ body.contact-dialog-open { overflow: hidden; }
 .unified-contact-field > small { display: block; margin-top: 5px; color: #6c7783; font-size: 12px; }
 .unified-contact-identity { display: grid; grid-template-columns: .8fr 1.2fr; gap: 11px; }
 .unified-contact-honeypot { position: absolute; left: -10000px; width: 1px; height: 1px; overflow: hidden; }
+.unified-contact-turnstile { min-height: 0; }
+.unified-contact-turnstile iframe { max-width: 100%; }
 .unified-contact-footer { display: grid; grid-template-columns: 1fr auto; gap: 18px; align-items: center; }
 .unified-contact-footer p { margin: 0; color: #68737f; font-size: 12px; line-height: 1.5; }
 .unified-contact-footer button { min-height: 46px; padding: 0 18px; border: 0; border-radius: 3px; color: var(--white); background: var(--teal-dark); cursor: pointer; font: inherit; font-size: 14px; font-weight: 760; }

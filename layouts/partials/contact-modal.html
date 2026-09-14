@@ -9,8 +9,9 @@
     <button class="unified-contact-close" type="button" aria-label="Close contact form">×</button>
   </header>
 
-  <form class="unified-contact-form" novalidate data-contact-endpoint="" data-contact-email="{{ site.Params.email }}">
+  <form class="unified-contact-form" novalidate data-contact-endpoint="/api/contact" data-turnstile-site-key="{{ site.Params.turnstileSiteKey }}">
     <input type="hidden" name="interest" value="">
+    <input type="hidden" name="started_at" value="">
 
     <fieldset class="unified-contact-topic">
       <legend class="visually-hidden">Type of enquiry</legend>
@@ -97,9 +98,11 @@
         <input id="unified-contact-confirmation" name="confirmation" type="text" tabindex="-1" autocomplete="off">
       </div>
 
+      <div class="unified-contact-turnstile" aria-label="Spam protection"></div>
+
       <div class="unified-contact-footer">
         <p>Your details will be used only to read and reply to this message. No mailing list.</p>
-        <button type="submit">Continue by email <span aria-hidden="true">→</span></button>
+        <button type="submit">Send enquiry <span aria-hidden="true">→</span></button>
       </div>
       <p class="unified-contact-status" role="status" aria-live="polite"></p>
     </div>
