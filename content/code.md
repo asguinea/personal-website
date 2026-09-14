@@ -1,7 +1,9 @@
 ---
 title: "Code, systems and attribution"
+seoTitle: "AI Research Code & Systems | Alejandro Sanchez Guinea"
 eyebrow: "Technical record"
 description: "A transparent account of how Alejandro contributed to systems developed through supervised PhD and MSc research."
+lastmod: 2026-09-14
 ---
 
 Most software systems associated with my recent research were developed within PhD and MSc projects under my supervision, in close collaboration with the respective researchers.
@@ -19,4 +21,3 @@ Implementations are hosted in the repositories of the primary developers. This s
 These systems directly inform the design choices behind EyeTrustAI, particularly around when AI systems may act autonomously and when control must escalate to humans.
 
 See [supervised research programmes](/supervision/) for the main systems and repositories.
-

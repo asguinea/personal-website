@@ -1,6 +1,10 @@
 ---
 title: "An AI pilot should produce evidence, not activity"
+seoTitle: "AI Pilots Should Produce Evidence | Alejandro Sanchez Guinea"
 description: "A practical way to connect AI pilots to the business and technical decisions they are supposed to inform."
+date: 2026-09-13
+lastmod: 2026-09-14
+author: "Alejandro Sanchez Guinea"
 category: "Software innovation"
 weight: 20
 eyebrow: "Field note · Software innovation"

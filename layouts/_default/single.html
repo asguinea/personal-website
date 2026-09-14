@@ -4,6 +4,9 @@
     {{ with .Params.eyebrow }}<p class="eyebrow">{{ . }}</p>{{ end }}
     <h1>{{ .Title }}</h1>
     {{ with .Description }}<p class="page-deck">{{ . }}</p>{{ end }}
+    {{ if and (eq .Section "ideas") .IsPage }}
+    <p class="article-byline">By <a href="/about/">Alejandro Sanchez Guinea</a><span aria-hidden="true">·</span><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time></p>
+    {{ end }}
   </header>
   <div class="page-body shell prose">{{ .Content }}</div>
 </article>

@@ -1,6 +1,9 @@
 ---
 title: "About"
-description: "Alejandro Sanchez Guinea on dependable AI, research leadership, foundation models, practical technology and natural intelligence."
+seoTitle: "About Alejandro Sanchez Guinea | AI Scientist & Builder"
+description: "AI scientist, Chief Scientist, founder, software builder and advisor working in dependable AI, research leadership, foundation models and natural intelligence."
+lastmod: 2026-09-14
+ogImage: "/og/about.png"
 layout: "about-third"
 url: "/about/"
 aliases:

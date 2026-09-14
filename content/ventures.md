@@ -1,7 +1,9 @@
 ---
 title: "Ventures"
+seoTitle: "AI & Software Ventures | Alejandro Sanchez Guinea"
 eyebrow: "Founder-led work"
 description: "Burrito’s Labs and EyeTrustAI: two distinct ventures spanning original software products and specialised AI."
+lastmod: 2026-09-14
 ---
 
 ## Two ventures, different purposes

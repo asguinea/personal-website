@@ -1,7 +1,9 @@
 ---
 title: "Computable abstraction"
+seoTitle: "Natural Intelligence Research | Alejandro Sanchez Guinea"
 eyebrow: "Intelligence research direction"
 description: "Two research lines on computable abstraction, natural intelligence and computational complexity."
+lastmod: 2026-09-14
 url: "/research/intelligence/"
 ---
 

@@ -1,22 +1,40 @@
 <!doctype html>
 <html lang="{{ site.Language.Lang }}">
 <head>
+  {{- $metaTitle := printf "%s | %s" .Title site.Params.author -}}
+  {{- if .IsHome }}{{ $metaTitle = site.Title }}{{ end -}}
+  {{- with .Params.seoTitle }}{{ $metaTitle = . }}{{ end -}}
+  {{- $metaDescription := .Description | default site.Params.description -}}
+  {{- $ogImage := "/og.png" -}}
+  {{- if eq .Section "ideas" }}{{ $ogImage = "/og/ideas.png" }}{{ end -}}
+  {{- with .Params.ogImage }}{{ $ogImage = . }}{{ end -}}
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f4f6f8">
-  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | Alejandro Sanchez Guinea{{ end }}</title>
-  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | Alejandro Sanchez Guinea{{ end }}">
-  <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
-  <meta property="og:image" content="{{ absURL "og.png" }}">
-  <meta property="og:image:width" content="1731">
-  <meta property="og:image:height" content="909">
+  <title>{{ $metaTitle }}</title>
+  <meta name="description" content="{{ $metaDescription }}">
+  <meta property="og:type" content="{{ if and (eq .Section "ideas") .IsPage }}article{{ else }}website{{ end }}">
+  <meta property="og:site_name" content="Alejandro Sanchez Guinea">
+  <meta property="og:locale" content="en_GB">
+  <meta property="og:url" content="{{ .Permalink }}">
+  <meta property="og:title" content="{{ $metaTitle }}">
+  <meta property="og:description" content="{{ $metaDescription }}">
+  <meta property="og:image" content="{{ absURL $ogImage }}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="{{ $metaTitle }}">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} | Alejandro Sanchez Guinea{{ end }}">
-  <meta name="twitter:description" content="{{ with .Description }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
-  <meta name="twitter:image" content="{{ absURL "og.png" }}">
+  <meta name="twitter:title" content="{{ $metaTitle }}">
+  <meta name="twitter:description" content="{{ $metaDescription }}">
+  <meta name="twitter:image" content="{{ absURL $ogImage }}">
+  {{ if and (eq .Section "ideas") .IsPage }}
+  <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+  <meta property="article:modified_time" content="{{ .Lastmod.Format "2006-01-02T15:04:05Z07:00" }}">
+  <meta property="article:author" content="{{ absURL "about/" }}">
+  {{ end }}
   <link rel="canonical" href="{{ .Permalink }}">
+  <link rel="alternate" type="application/rss+xml" title="Alejandro Sanchez Guinea" href="{{ absURL "index.xml" }}">
+  {{ partial "structured-data.html" . }}
   {{ $css := resources.Get "css/main.css" | minify | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 </head>
@@ -37,9 +55,22 @@
     </div>
   </header>
   <main id="main">{{ block "main" . }}{{ end }}</main>
-  <footer class="site-footer site-footer-minimal">
+  <footer class="site-footer site-footer-directory">
+    <div class="shell footer-directory-grid">
+      <a class="footer-directory-name" href="/">Alejandro Sanchez Guinea</a>
+      <nav class="footer-directory-links" aria-label="Website directory">
+        <a href="/about/">About</a>
+        <a href="/eyetrustai/">Chief Scientist</a>
+        <a href="/burritos-labs/">Founder &amp; Builder</a>
+        <a href="/research/">Research Scientist</a>
+        <a href="/advisory/">Advisor</a>
+        <a href="/ideas/">Ideas</a>
+        <a class="js-contact-open" href="/contact/">Contact</a>
+      </nav>
+    </div>
     <div class="shell footer-bottom">
       <span>© Alejandro Sanchez Guinea {{ now.Year }}</span>
+      <span class="footer-external-links"><a href="{{ site.Params.linkedin }}">LinkedIn</a><a href="{{ site.Params.github }}">GitHub</a></span>
     </div>
   </footer>
   {{ partial "contact-modal.html" . }}

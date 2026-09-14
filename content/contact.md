@@ -1,7 +1,9 @@
 ---
 title: "Contact"
+seoTitle: "Contact Alejandro Sanchez Guinea | Professional Enquiries"
 eyebrow: "Contact"
 description: "For advisory engagements, senior roles, research collaborations and speaking opportunities."
+lastmod: 2026-09-14
 ---
 
 <div class="contact-grid">

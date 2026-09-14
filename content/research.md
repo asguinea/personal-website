@@ -1,7 +1,10 @@
 ---
 title: "Independent research"
+seoTitle: "Independent AI Research Scientist | Alejandro Sanchez Guinea"
 eyebrow: "Independent research programme"
-description: "Research on foundation models, computer vision, uncertainty and risk control, computer graphics, and intelligence, developed through theory, experiments and reproducible public software."
+description: "Independent research on foundation models, computer vision, uncertainty and risk control, computer graphics and natural intelligence."
+lastmod: 2026-09-14
+ogImage: "/og/research.png"
 layout: "research"
 aliases:
   - "/publications/"

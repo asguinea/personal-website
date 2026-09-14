@@ -1,0 +1,128 @@
+{{- $personID := printf "%s#person" site.BaseURL -}}
+{{- $websiteID := printf "%s#website" site.BaseURL -}}
+{{- $eyeTrustID := "https://eyetrustai.com/#organization" -}}
+{{- $burritosID := "https://burritoslabs.com/#organization" -}}
+{{- $sameAs := slice site.Params.linkedin site.Params.github site.Params.dblp site.Params.orcid -}}
+{{- $person := dict
+  "@type" "Person"
+  "@id" $personID
+  "name" site.Params.author
+  "alternateName" (slice site.Params.alternateName)
+  "url" site.BaseURL
+  "image" (absURL "img/alejandro-about.jpg")
+  "description" site.Params.description
+  "honorificSuffix" "PhD"
+  "jobTitle" (slice "Chief Scientist" "Founder and Creative Director" "Independent Research Scientist" "AI and R&D Advisor")
+  "sameAs" $sameAs
+  "knowsAbout" (slice "Dependable AI systems" "AI safety" "Foundation models" "Uncertainty quantification" "Conformal risk control" "Computer vision" "Computer graphics" "Natural intelligence" "Software architecture" "R&D strategy and scientific leadership")
+  "homeLocation" (dict "@type" "Place" "name" "Luxembourg")
+  "worksFor" (dict "@id" $eyeTrustID)
+  "affiliation" (slice (dict "@id" $eyeTrustID) (dict "@id" $burritosID))
+-}}
+{{- $website := dict
+  "@type" "WebSite"
+  "@id" $websiteID
+  "url" site.BaseURL
+  "name" site.Params.author
+  "description" site.Params.description
+  "inLanguage" site.Language.LanguageCode
+  "author" (dict "@id" $personID)
+  "publisher" (dict "@id" $personID)
+-}}
+{{- $eyeTrust := dict
+  "@type" "Organization"
+  "@id" $eyeTrustID
+  "name" "EyeTrustAI"
+  "url" "https://eyetrustai.com/"
+  "description" "Decision infrastructure and research for risk-controlled AI systems operating under real deployment conditions."
+-}}
+{{- $burritos := dict
+  "@type" "Organization"
+  "@id" $burritosID
+  "name" "Burrito’s Labs"
+  "url" "https://burritoslabs.com/"
+  "description" "An independent app and game studio creating original software products."
+  "founder" (dict "@id" $personID)
+-}}
+{{- $identityData := dict "@context" "https://schema.org" "@graph" (slice $website $person $eyeTrust $burritos) -}}
+<script type="application/ld+json">{{ $identityData | jsonify | safeJS }}</script>
+
+{{- $pageTitle := printf "%s | %s" .Title site.Params.author -}}
+{{- if .IsHome }}{{ $pageTitle = site.Title }}{{ end -}}
+{{- with .Params.seoTitle }}{{ $pageTitle = . }}{{ end -}}
+{{- $pageDescription := .Description | default site.Params.description -}}
+{{- $pageID := printf "%s#webpage" .Permalink -}}
+
+{{- if and (eq .Section "ideas") .IsPage -}}
+  {{- $article := dict
+    "@context" "https://schema.org"
+    "@type" "Article"
+    "@id" $pageID
+    "url" .Permalink
+    "headline" .Title
+    "description" $pageDescription
+    "datePublished" (.Date.Format "2006-01-02")
+    "dateModified" (.Lastmod.Format "2006-01-02")
+    "inLanguage" site.Language.LanguageCode
+    "image" (absURL (.Params.ogImage | default "/og/ideas.png"))
+    "author" (dict "@id" $personID)
+    "publisher" (dict "@id" $personID)
+    "isPartOf" (dict "@id" $websiteID)
+    "mainEntityOfPage" (dict "@id" .Permalink)
+    "articleSection" (.Params.category | default "Ideas")
+  -}}
+  <script type="application/ld+json">{{ $article | jsonify | safeJS }}</script>
+{{- else if eq .RelPermalink "/about/" -}}
+  {{- $profile := dict
+    "@context" "https://schema.org"
+    "@type" "ProfilePage"
+    "@id" $pageID
+    "url" .Permalink
+    "name" $pageTitle
+    "description" $pageDescription
+    "dateCreated" "2026-09-13"
+    "dateModified" (.Lastmod.Format "2006-01-02")
+    "inLanguage" site.Language.LanguageCode
+    "isPartOf" (dict "@id" $websiteID)
+    "mainEntity" (dict "@id" $personID)
+  -}}
+  <script type="application/ld+json">{{ $profile | jsonify | safeJS }}</script>
+{{- else if eq .RelPermalink "/advisory/" -}}
+  {{- $serviceID := printf "%s#service" .Permalink -}}
+  {{- $servicePage := dict
+    "@type" "WebPage"
+    "@id" $pageID
+    "url" .Permalink
+    "name" $pageTitle
+    "description" $pageDescription
+    "inLanguage" site.Language.LanguageCode
+    "isPartOf" (dict "@id" $websiteID)
+    "about" (dict "@id" $personID)
+    "mainEntity" (dict "@id" $serviceID)
+  -}}
+  {{- $service := dict
+    "@type" "Service"
+    "@id" $serviceID
+    "name" "AI Innovation and R&D Advisory"
+    "description" $pageDescription
+    "url" .Permalink
+    "serviceType" (slice "AI and innovation advisory" "Software architecture and technical direction" "R&D strategy and scientific leadership")
+    "provider" (dict "@id" $personID)
+    "areaServed" "International"
+  -}}
+  {{- $serviceData := dict "@context" "https://schema.org" "@graph" (slice $servicePage $service) -}}
+  <script type="application/ld+json">{{ $serviceData | jsonify | safeJS }}</script>
+{{- else -}}
+  {{- $webPage := dict
+    "@context" "https://schema.org"
+    "@type" "WebPage"
+    "@id" $pageID
+    "url" .Permalink
+    "name" $pageTitle
+    "description" $pageDescription
+    "inLanguage" site.Language.LanguageCode
+    "isPartOf" (dict "@id" $websiteID)
+    "about" (dict "@id" $personID)
+  -}}
+  <script type="application/ld+json">{{ $webPage | jsonify | safeJS }}</script>
+{{- end -}}

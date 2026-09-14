@@ -1,6 +1,10 @@
 ---
 title: "What should remain research, and what is ready to become engineering?"
+seoTitle: "Research or Engineering? | Alejandro Sanchez Guinea"
 description: "A useful boundary for teams moving technically ambitious AI work toward a product programme."
+date: 2026-09-13
+lastmod: 2026-09-14
+author: "Alejandro Sanchez Guinea"
 category: "AI architecture"
 weight: 30
 eyebrow: "Field note · AI architecture"

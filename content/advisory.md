@@ -1,7 +1,10 @@
 ---
 title: "AI, innovation and R&D advisory"
+seoTitle: "AI Innovation & R&D Advisor | Alejandro Sanchez Guinea"
 eyebrow: "Advisory & consulting"
-description: "Independent advice for founders, CTOs and innovation leaders working on AI, software and research programmes."
+description: "Independent advisory on AI strategy, software architecture, technical direction, R&D strategy and scientific leadership for founders and innovation leaders."
+lastmod: 2026-09-14
+ogImage: "/og/advisory.png"
 ---
 
 <div class="page-callout">

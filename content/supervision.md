@@ -1,7 +1,9 @@
 ---
 title: "Supervised research programmes"
+seoTitle: "Supervised AI Research Programmes | Alejandro Sanchez Guinea"
 eyebrow: "Research leadership"
 description: "Two completed PhD programmes that form part of the technical foundation for Alejandro's work in uncertainty-aware autonomy and multimodal perception."
+lastmod: 2026-09-14
 ---
 
 The projects below were supervised in my role as an academic research lead. Implementations are credited to and hosted by the primary developers; my contribution focused on scientific direction, model and representation design, validation strategy and publication strategy.

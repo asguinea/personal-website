@@ -1,14 +1,17 @@
 baseURL = "https://www.alejandrosanchezguinea.com/"
 languageCode = "en-us"
-title = "Alejandro Sanchez Guinea | AI Innovation & R&D Leadership"
+title = "Alejandro Sanchez Guinea | AI Scientist, Founder & Advisor"
 enableRobotsTXT = true
 disableKinds = ["taxonomy", "term"]
 
 [params]
   author = "Alejandro Sanchez Guinea"
-  description = "AI innovation and R&D leadership across research strategy, software architecture and technically ambitious product development."
+  alternateName = "Alejandro Sánchez Guinea"
+  description = "Chief Scientist at EyeTrustAI, founder and builder at Burrito’s Labs, independent AI researcher, and advisor on AI, software architecture and R&D strategy."
   linkedin = "https://www.linkedin.com/in/alejandro-sanchez-guinea/"
   github = "https://github.com/asguinea"
+  dblp = "https://dblp.org/pid/132/8925"
+  orcid = "https://orcid.org/0000-0002-1860-0595"
   email = "ale.sanchez.guinea@gmail.com"
 
 [menu]
