@@ -53,26 +53,7 @@
 {{- $pageDescription := .Description | default site.Params.description -}}
 {{- $pageID := printf "%s#webpage" .Permalink -}}
 
-{{- if and (eq .Section "ideas") .IsPage -}}
-  {{- $article := dict
-    "@context" "https://schema.org"
-    "@type" "Article"
-    "@id" $pageID
-    "url" .Permalink
-    "headline" .Title
-    "description" $pageDescription
-    "datePublished" (.Date.Format "2006-01-02")
-    "dateModified" (.Lastmod.Format "2006-01-02")
-    "inLanguage" site.Language.LanguageCode
-    "image" (absURL (.Params.ogImage | default "/og/ideas.png"))
-    "author" (dict "@id" $personID)
-    "publisher" (dict "@id" $personID)
-    "isPartOf" (dict "@id" $websiteID)
-    "mainEntityOfPage" (dict "@id" .Permalink)
-    "articleSection" (.Params.category | default "Ideas")
-  -}}
-  <script type="application/ld+json">{{ $article | jsonify | safeJS }}</script>
-{{- else if eq .RelPermalink "/about/" -}}
+{{- if eq .RelPermalink "/about/" -}}
   {{- $profile := dict
     "@context" "https://schema.org"
     "@type" "ProfilePage"

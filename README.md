@@ -22,7 +22,6 @@ The generated site is written to `public/`.
 
 - `content/advisory.md`: services, flagship review and engagement formats
 - `content/about.md`: professional narrative and leadership proof
-- `content/ideas/`: initial decision-oriented articles
 - `content/research.md`: research themes and their commercial relevance
 - `content/contact.md`: enquiry path
 
