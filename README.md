@@ -23,8 +23,8 @@ The generated site is written to `public/`.
 - `content/advisory.md`: services, flagship review and engagement formats
 - `content/about.md`: professional narrative and leadership proof
 - `content/research.md`: research themes and their commercial relevance
-- `content/contact.md`: enquiry path
+- `content/contact.md`: inquiry path
 
 The social-sharing card is `static/og.png`.
 
-The site self-hosts the Inter variable font in `static/fonts/`; its SIL Open Font License is included alongside the font files. Homepage and About portraits are web-optimised copies of the supplied professional photographs.
+The site self-hosts the Inter variable font in `static/fonts/`; its SIL Open Font License is included alongside the font files. Homepage and About portraits are web-optimized copies of the supplied professional photographs.

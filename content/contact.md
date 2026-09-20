@@ -1,6 +1,6 @@
 ---
 title: "Contact"
-seoTitle: "Contact Alejandro Sanchez Guinea | Professional Enquiries"
+seoTitle: "Contact Alejandro Sanchez Guinea | Professional Inquiries"
 eyebrow: "Contact"
 description: "For advisory engagements, senior roles, research collaborations and speaking opportunities."
 lastmod: 2026-09-14
@@ -12,7 +12,7 @@ lastmod: 2026-09-14
     <p>Please tell me:</p>
     <ul>
       <li>why you are getting in touch;</li>
-      <li>the organisation, role, project or question involved;</li>
+      <li>the organization, role, project or question involved;</li>
       <li>what you would like to explore together;</li>
       <li>the timing you are working toward.</li>
     </ul>
@@ -30,7 +30,7 @@ lastmod: 2026-09-14
 
 <div class="format-grid">
   <div><h3>Advisory</h3><p>AI and innovation advisory, R&D strategy, scientific leadership and specialist technical assessment.</p></div>
-  <div><h3>Leadership roles</h3><p>Research programme leadership, technical programme management for AI, applied research direction, R&D strategy or principal-level scientific opportunities.</p></div>
+  <div><h3>Leadership roles</h3><p>Research program leadership, technical program management for AI, applied research direction, R&D strategy or principal-level scientific opportunities.</p></div>
   <div><h3>Research & speaking</h3><p>Research collaborations, invited talks, executive sessions and discussions around the independent research agenda.</p></div>
 </div>
 

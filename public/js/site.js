@@ -42,10 +42,10 @@ const contactRoutes = {
   engagement: {
     guidance: 'Share enough context for me to assess whether an advisory engagement could be useful. If there appears to be a good fit, I will suggest a short introductory call.',
     label: 'Decision or challenge',
-    placeholder: 'Briefly describe the decision, initiative or programme and where you would value independent input.',
+    placeholder: 'Briefly describe the decision, initiative or program and where you would value independent input.',
   },
   role: {
-    guidance: 'Share the role, organisation and expected scope of responsibility. I will follow up if the opportunity appears relevant.',
+    guidance: 'Share the role, organization and expected scope of responsibility. I will follow up if the opportunity appears relevant.',
     label: 'Role or opportunity',
     placeholder: 'Briefly describe the role, its scope and why you think there could be a fit.',
   },
@@ -230,10 +230,10 @@ contactForm?.addEventListener('submit', async (event) => {
     contactForm.reset();
     setContactSelection('', '');
     if (contactStartedAt) contactStartedAt.value = String(Date.now());
-    contactStatus.textContent = 'Thank you. Your enquiry has been sent.';
+    contactStatus.textContent = 'Thank you. Your inquiry has been sent.';
     if (window.turnstile && contactTurnstileWidgetId !== null) window.turnstile.reset(contactTurnstileWidgetId);
   } catch {
-    contactStatus.textContent = 'The enquiry could not be sent. Please use the direct email link below.';
+    contactStatus.textContent = 'The inquiry could not be sent. Please use the direct email link below.';
     if (window.turnstile && contactTurnstileWidgetId !== null) window.turnstile.reset(contactTurnstileWidgetId);
   } finally {
     submitButton.disabled = false;

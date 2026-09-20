@@ -1,7 +1,7 @@
 ---
 title: "Independent research"
 seoTitle: "Independent AI Research Scientist | Alejandro Sanchez Guinea"
-eyebrow: "Independent research programme"
+eyebrow: "Independent research program"
 description: "Independent research on foundation models, computer vision, uncertainty and risk control, computer graphics and natural intelligence."
 lastmod: 2026-09-14
 ogImage: "/og/research.png"
@@ -19,7 +19,7 @@ aliases:
   <article class="agenda-primary">
     <span>01</span>
     <h2>Foundation models</h2>
-    <p>What representational structure makes broad transfer possible? This line tests whether recurrent, compositional representations are a prerequisite for foundation-model behaviour beyond language.</p>
+    <p>What representational structure makes broad transfer possible? This line tests whether recurrent, compositional representations are a prerequisite for foundation-model behavior beyond language.</p>
     <a class="agenda-programme-link" href="#foundation-model-repositories">View public work <span aria-hidden="true">↓</span></a>
   </article>
   <article>
@@ -43,7 +43,7 @@ aliases:
   <article class="agenda-intelligence">
     <span>05</span>
     <h2>Intelligence</h2>
-    <p>Two connected programmes: a general theory of how natural intelligence constructs and recursively reuses abstractions, and a focused investigation of whether abstraction can reduce computational complexity.</p>
+    <p>Two connected programs: a general theory of how natural intelligence constructs and recursively reuses abstractions, and a focused investigation of whether abstraction can reduce computational complexity.</p>
     <a class="agenda-card-link" href="/research/intelligence/">Explore the research direction <span aria-hidden="true">→</span></a>
   </article>
 </div>
@@ -138,7 +138,7 @@ aliases:
       <a href="/eyetrustai/#research-programme">
         <small>EyeTrustAI research agenda</small>
         <h4>Closed-Loop Conformal Risk Control</h4>
-        <p>A broader programme on how risk certificates transfer, govern action, receive feedback and adapt under changing deployment conditions.</p>
+        <p>A broader program on how risk certificates transfer, govern action, receive feedback and adapt under changing deployment conditions.</p>
         <b>View research agenda <span aria-hidden="true">→</span></b>
       </a>
     </div>
@@ -176,7 +176,7 @@ aliases:
   <header class="risk-portfolio-intro">
     <p class="eyebrow">Active research portfolio</p>
     <h2>Conformal risk control for deployed AI systems</h2>
-    <p>This programme asks how statistically valid risk guarantees can survive the conditions of real deployment: changing environments, adaptive policies, selective feedback, delayed labels and systems whose decisions alter the data they later observe.</p>
+    <p>This program asks how statistically valid risk guarantees can survive the conditions of real deployment: changing environments, adaptive policies, selective feedback, delayed labels and systems whose decisions alter the data they later observe.</p>
   </header>
 
   <div class="risk-track-grid">
@@ -194,7 +194,7 @@ aliases:
       <div class="risk-track-heading"><span>Track II</span><h3>Closed-loop AI control</h3></div>
       <p>How can risk be controlled when AI actions, human review and the resulting evidence form a feedback loop?</p>
       <ul>
-        <li><strong>Adaptive sequential conformal authorisation:</strong> allocating risk across multi-step AI workflows.</li>
+        <li><strong>Adaptive sequential conformal authorization:</strong> allocating risk across multi-step AI workflows.</li>
         <li><strong>CRC under policy-dependent feedback:</strong> preserving guarantees under selective release, delayed labels and review bias.</li>
         <li><strong>Safe active auditing:</strong> allocating human review to improve future autonomy while retaining risk guarantees.</li>
         <li><strong>Performative CRC:</strong> studying risk guarantees when the controller changes the environment it controls.</li>
@@ -218,48 +218,48 @@ aliases:
 
 ## Selected publications by research area
 
-The selection below is organised around the first four areas of the research agenda. The [complete indexed record is available on DBLP](https://dblp.org/pid/132/8925.html).
+The selection below is organized around the first four areas of the research agenda. The [complete indexed record is available on DBLP](https://dblp.org/pid/132/8925.html).
 
 <div class="publication-groups" id="publications">
   <section>
     <header><span>01</span><h2>Foundation models</h2></header>
     <ul>
-      <li><strong>Motion as Language: Towards a Situation–Motion Language for Spatio-Temporal Learning.</strong> NeurIPS Workshops, 2025.</li>
-      <li><strong>Ophthalmology as a Lens for Trustworthy GenAI in Europe.</strong> NeurIPS Workshops, 2025.</li>
-      <li><strong>CLEAR-Command.</strong> NAACL System Demonstrations, 2025.</li>
-      <li><strong>AEXL: Enhancing Path Prediction with Active Explainable Learning via Large Language Models.</strong> CHI Extended Abstracts, 2025.</li>
+      <li><strong><a href="https://openreview.net/forum?id=1xMzJhx25r">Motion as Language: Towards a Situation–Motion Language for Spatio-Temporal Learning.</a></strong> NeurIPS Workshops, 2025.</li>
+      <li><strong><a href="https://openreview.net/forum?id=OzytmWYjGd">Ophthalmology as a Lens for Trustworthy GenAI in Europe.</a></strong> NeurIPS Workshops, 2025.</li>
+      <li><strong><a href="https://aclanthology.org/2025.naacl-demo.3/">CLEAR-Command.</a></strong> NAACL System Demonstrations, 2025.</li>
+      <li><strong><a href="https://doi.org/10.1145/3706599.3719963">AEXL: Enhancing Path Prediction with Active Explainable Learning via Large Language Models.</a></strong> CHI Extended Abstracts, 2025.</li>
     </ul>
   </section>
 
   <section>
     <header><span>02</span><h2>Computer vision</h2></header>
     <ul>
-      <li><strong>DeSPITE: Deep Skeleton–Pointcloud–IMU–Text Embeddings.</strong> ICCV, 2025.</li>
-      <li><strong>NeSyMoF: A Neuro-Symbolic Model for Motion Forecasting.</strong> IROS, 2024.</li>
-      <li><strong>LiOn-XA: Unsupervised Domain Adaptation via LiDAR-Only Cross-Modal Adversarial Training.</strong> IROS, 2024.</li>
-      <li><strong>Unsupervised 4D LiDAR Moving Object Segmentation.</strong> WACV, 2023.</li>
-      <li><strong>Improving Wearable-Based Activity Recognition Using Image Representations.</strong> Sensors, 2022.</li>
-      <li><strong>VIDENS: Vision-Based User Identification from Inertial Sensors.</strong> ISWC, 2021.</li>
+      <li><strong><a href="https://doi.org/10.1109/ICCV51701.2025.01358">DeSPITE: Deep Skeleton–Pointcloud–IMU–Text Embeddings.</a></strong> ICCV, 2025.</li>
+      <li><strong><a href="https://doi.org/10.1109/IROS58592.2024.10801779">NeSyMoF: A Neuro-Symbolic Model for Motion Forecasting.</a></strong> IROS, 2024.</li>
+      <li><strong><a href="https://doi.org/10.1109/IROS58592.2024.10801916">LiOn-XA: Unsupervised Domain Adaptation via LiDAR-Only Cross-Modal Adversarial Training.</a></strong> IROS, 2024.</li>
+      <li><strong><a href="https://doi.org/10.1109/WACV56688.2023.00169">Unsupervised 4D LiDAR Moving Object Segmentation.</a></strong> WACV, 2023.</li>
+      <li><strong><a href="https://doi.org/10.3390/s22051840">Improving Wearable-Based Activity Recognition Using Image Representations.</a></strong> Sensors, 2022.</li>
+      <li><strong><a href="https://doi.org/10.1145/3460421.3480426">VIDENS: Vision-Based User Identification from Inertial Sensors.</a></strong> ISWC, 2021.</li>
     </ul>
   </section>
 
   <section>
     <header><span>03</span><h2>Uncertainty quantification and risk control</h2></header>
     <ul>
-      <li><strong>SafePath: Conformal Prediction for Safe LLM-Based Autonomous Navigation.</strong> arXiv, 2025.</li>
-      <li><strong>Conformal Prediction for Semantically-Aware Autonomous Perception in Urban Environments.</strong> CoRL, 2024.</li>
-      <li><strong>AR-CP: Uncertainty-Aware Perception in Adverse Conditions.</strong> CVPR Workshops, 2024.</li>
-      <li><strong>Can You Handle the Truth? Investigating AR-Based Communication of Deep-Learning Uncertainty.</strong> ISMAR, 2023.</li>
-      <li><strong>Visualization of Machine Learning Uncertainty in AR-Based See-Through Applications.</strong> AIVR, 2022.</li>
+      <li><strong><a href="https://arxiv.org/abs/2505.09427">SafePath: Conformal Prediction for Safe LLM-Based Autonomous Navigation.</a></strong> arXiv, 2025.</li>
+      <li><strong><a href="https://proceedings.mlr.press/v270/doula25a.html">Conformal Prediction for Semantically-Aware Autonomous Perception in Urban Environments.</a></strong> CoRL, 2024.</li>
+      <li><strong><a href="https://doi.org/10.1109/CVPRW63382.2024.00026">AR-CP: Uncertainty-Aware Perception in Adverse Conditions.</a></strong> CVPR Workshops, 2024.</li>
+      <li><strong><a href="https://doi.org/10.1109/ISMAR59233.2023.00040">Can You Handle the Truth? Investigating AR-Based Communication of Deep-Learning Uncertainty.</a></strong> ISMAR, 2023.</li>
+      <li><strong><a href="https://doi.org/10.1109/AIVR56993.2022.00022">Visualization of Machine Learning Uncertainty in AR-Based See-Through Applications.</a></strong> AIVR, 2022.</li>
     </ul>
   </section>
 
   <section>
     <header><span>04</span><h2>Computer graphics</h2></header>
     <ul>
-      <li><strong>Whenever, Wherever: Orchestrating Crowd Simulations with Spatio-Temporal Spawn Dynamics.</strong> ICRA, 2025.</li>
-      <li><strong>PointCloudLab: 3D Point Cloud Annotation with Visual Aids and Immersion.</strong> ICRA, 2023.</li>
-      <li><strong>VR-Surv: A VR-Based Privacy Preserving Surveillance System.</strong> CHI Extended Abstracts, 2022.</li>
+      <li><strong><a href="https://doi.org/10.1109/ICRA55743.2025.11128302">Whenever, Wherever: Orchestrating Crowd Simulations with Spatio-Temporal Spawn Dynamics.</a></strong> ICRA, 2025.</li>
+      <li><strong><a href="https://doi.org/10.1109/ICRA48891.2023.10160225">PointCloudLab: 3D Point Cloud Annotation with Visual Aids and Immersion.</a></strong> ICRA, 2023.</li>
+      <li><strong><a href="https://doi.org/10.1145/3491101.3519645">VR-Surv: A VR-Based Privacy Preserving Surveillance System.</a></strong> CHI Extended Abstracts, 2022.</li>
     </ul>
   </section>
 </div>
@@ -269,6 +269,7 @@ Earlier work in software engineering, continuous experimentation and pervasive s
 <div class="professional-links research-links">
   <a href="https://dblp.org/pid/132/8925.html">Complete DBLP record <span>↗</span></a>
   <a href="https://github.com/asguinea">Public research on GitHub <span>↗</span></a>
+  <a href="/code/">Research code and contribution details <span>→</span></a>
   <a href="/supervision/">Supervised research <span>→</span></a>
   <a class="js-contact-open" data-contact-topic="collaboration" data-contact-interest="Independent research collaboration" href="/contact/?topic=collaboration&amp;interest=Independent%20research%20collaboration">Discuss research collaboration <span>↗</span></a>
 </div>

@@ -1,5 +1,5 @@
 baseURL = "https://www.alejandrosanchezguinea.com/"
-languageCode = "en-us"
+languageCode = "en-US"
 title = "Alejandro Sanchez Guinea | AI Scientist, Founder & Advisor"
 enableRobotsTXT = true
 disableKinds = ["taxonomy", "term"]
@@ -27,4 +27,4 @@ disableKinds = ["taxonomy", "term"]
       unsafe = true
 
 [outputs]
-  home = ["HTML", "RSS"]
+  home = ["HTML"]

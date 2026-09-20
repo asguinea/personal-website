@@ -13,11 +13,11 @@ My contributions focused on:
 - defining system and decision architectures;
 - specifying uncertainty and control representations;
 - shaping scientific questions and validation strategies;
-- connecting individual systems into a broader research programme;
+- connecting individual systems into a broader research program;
 - coordinating publication and collaboration partners.
 
 Implementations are hosted in the repositories of the primary developers. This site links to those repositories and attributes the work accordingly.
 
 These systems directly inform the design choices behind EyeTrustAI, particularly around when AI systems may act autonomously and when control must escalate to humans.
 
-See [supervised research programmes](/supervision/) for the main systems and repositories.
+See [supervised research programs](/supervision/) for the main systems and repositories.

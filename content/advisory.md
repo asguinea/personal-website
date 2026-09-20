@@ -9,7 +9,7 @@ ogImage: "/og/advisory.png"
 
 <div class="page-callout">
   <p class="micro-label">Advisory focus</p>
-  <p>Technical direction for AI and software initiatives, plus strategy and leadership for research and innovation programmes.</p>
+  <p>Technical direction for AI and software initiatives, plus strategy and leadership for research and innovation programs.</p>
 </div>
 
 ## Two areas of engagement
@@ -19,7 +19,7 @@ ogImage: "/og/advisory.png"
     <header>
       <div><span>01</span><small>Main advisory area</small></div>
       <h2>AI &amp; Innovation Advisory</h2>
-      <p>For an organisation developing, evaluating or committing to an AI or software initiative.</p>
+      <p>For an organization developing, evaluating or committing to an AI or software initiative.</p>
     </header>
     <div class="advisory-area-body">
       <div class="advisory-questions">
@@ -52,13 +52,13 @@ ogImage: "/og/advisory.png"
     <header>
       <div><span>02</span><small>Strategy and leadership</small></div>
       <h2>R&amp;D Strategy &amp; Scientific Leadership</h2>
-      <p>For an organisation establishing, organising or leading technically ambitious research and innovation work.</p>
+      <p>For an organization establishing, organizing or leading technically ambitious research and innovation work.</p>
     </header>
     <div class="advisory-area-body">
       <div class="advisory-questions">
         <h3>Typical work</h3>
         <ul>
-          <li>Research agendas and programme design</li>
+          <li>Research agendas and program design</li>
           <li>Workstreams, milestones and decisions</li>
           <li>Evaluation strategy and evidence</li>
           <li>Research and engineering alignment</li>
@@ -69,7 +69,7 @@ ogImage: "/og/advisory.png"
         <article>
           <p class="micro-label">Project format</p>
           <h3>R&amp;D Strategy Sprint</h3>
-          <p>A prioritised R&amp;D plan and leadership workshop, delivered over 3 to 4 weeks.</p>
+          <p>A prioritized R&amp;D plan and leadership workshop, delivered over 3 to 4 weeks.</p>
         </article>
         <article>
           <p class="micro-label">Ongoing format</p>
@@ -88,7 +88,7 @@ ogImage: "/og/advisory.png"
   <div>
     <p class="eyebrow light">Defined before work begins</p>
     <h2>Scope, responsibilities and fee are agreed in writing.</h2>
-    <p>The initial enquiry establishes context and fit. If it makes sense to proceed, I will suggest a short introductory call. It is not a free technical review.</p>
+    <p>The initial inquiry establishes context and fit. If it makes sense to proceed, I will suggest a short introductory call. It is not a free technical review.</p>
   </div>
   <div class="fee-steps">
     <p><strong>Decision sessions</strong><br>Offered for a fixed fee.</p>
@@ -101,8 +101,8 @@ ogImage: "/og/advisory.png"
 ## Relevant technical background
 
 <div class="audience-grid advisory-expertise">
-  <div><span>01</span><h3>AI and software systems</h3><p>Architecture, specialised-domain AI, computer vision, multimodal perception, foundation models and technical roadmaps.</p></div>
-  <div><span>02</span><h3>Research and innovation</h3><p>Agile and Lean development, continuous experimentation, programme design, evidence and research-to-product transitions.</p></div>
+  <div><span>01</span><h3>AI and software systems</h3><p>Architecture, specialized-domain AI, computer vision, multimodal perception, foundation models and technical roadmaps.</p></div>
+  <div><span>02</span><h3>Research and innovation</h3><p>Agile and Lean development, continuous experimentation, program design, evidence and research-to-product transitions.</p></div>
   <div><span>03</span><h3>Advanced intelligent systems</h3><p>Uncertainty quantification, conformal prediction, autonomous systems, forecasting and neuro-symbolic approaches.</p></div>
 </div>
 
@@ -111,7 +111,7 @@ ogImage: "/og/advisory.png"
 Work that belongs directly to an EyeTrustAI or Burrito’s Labs product is handled through the relevant company. Independent advisory covers non-competing architecture, software, R&D leadership and specialist research questions. The boundary is clarified before work begins.
 
 <div class="page-cta">
-  <p class="eyebrow light">Advisory enquiry</p>
-  <h2>Discuss the initiative, decision or programme.</h2>
+  <p class="eyebrow light">Advisory inquiry</p>
+  <h2>Discuss the initiative, decision or program.</h2>
   <a class="button button-light js-contact-open" data-contact-topic="engagement" href="/contact/?topic=engagement">Open the advisory contact form <span>↗</span></a>
 </div>

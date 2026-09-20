@@ -4,7 +4,7 @@ const topicLabels = {
   engagement: 'Advisory engagement',
   role: 'Role or leadership opportunity',
   collaboration: 'Venture or research collaboration',
-  other: 'Professional enquiry',
+  other: 'Professional inquiry',
 };
 
 const collaborationLabels = {

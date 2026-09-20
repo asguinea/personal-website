@@ -56,7 +56,7 @@ export default {
       `Name: ${name}`,
       `Email: ${email}`,
       `Role: ${role}`,
-      `Organisation or project: ${organisation}`,
+      `Organization or project: ${organisation}`,
       projectUrl ? `Website: ${projectUrl}` : '',
       `Expected timeframe: ${timeframe}`,
       '',
